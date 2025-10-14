@@ -11,35 +11,35 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { Header } from "@/components/Header";
 
-export default function AccidentReport() {
+export default function SingleVehicleReport() {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  
+
   const STEPS = [
-    { id: 1, name: "Photos", label: t('report.step1.label') },
-    { id: 2, name: "License Plate", label: t('report.step2.label') },
-    { id: 3, name: "Description", label: t('report.step3.label') },
-    { id: 4, name: "Vehicle Info", label: t('report.step4.label') },
-    { id: 5, name: "Location", label: t('report.step5.label') },
-    { id: 6, name: "Other Party", label: t('report.step6.label') },
-    { id: 7, name: "Summary", label: t('report.step7.label') },
+    { id: 1, name: "Photos", label: t('singleVehicle.step1.label') },
+    { id: 2, name: "License Plate", label: t('singleVehicle.step2.label') },
+    { id: 3, name: "Description", label: t('singleVehicle.step3.label') },
+    { id: 4, name: "Vehicle Info", label: t('singleVehicle.step4.label') },
+    { id: 5, name: "Location", label: t('singleVehicle.step5.label') },
+    { id: 6, name: "Summary", label: t('singleVehicle.step6.label') },
   ];
 
-  const TEMPLATES = [
-    t('report.step3.template1'),
-    t('report.step3.template2'),
-    t('report.step3.template3'),
-    t('report.step3.template4'),
-    t('report.step3.template5'),
+  const ACCIDENT_TYPES = [
+    t('singleVehicle.accidentTypes.collision'),
+    t('singleVehicle.accidentTypes.damage'),
+    t('singleVehicle.accidentTypes.vandalism'),
+    t('singleVehicle.accidentTypes.weather'),
+    t('singleVehicle.accidentTypes.other'),
   ];
+
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     photos: [] as File[],
     licensePlate: "",
     description: "",
+    accidentType: "",
     vehicleOwnership: "",
     locationConsent: false,
-    otherPartyType: "",
   });
 
   const progress = (currentStep / STEPS.length) * 100;
@@ -68,9 +68,9 @@ export default function AccidentReport() {
         return (
           <div className="space-y-6">
             <div className="text-center space-y-3">
-              <h2 className="font-heading text-h2 text-foreground">{t('report.step1.title')}</h2>
+              <h2 className="font-heading text-h2 text-foreground">{t('singleVehicle.step1.title')}</h2>
               <p className="font-sans text-body text-muted-foreground">
-                {t('report.step1.description')}
+                {t('singleVehicle.step1.description')}
               </p>
             </div>
 
@@ -80,10 +80,10 @@ export default function AccidentReport() {
                   <Upload className="w-8 h-8 text-primary" />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
-                <p className="text-lg font-medium text-foreground">{t('report.step1.dropzone')}</p>
-                <p className="text-sm text-muted-foreground">{t('report.step1.supportedFormats')}</p>
+                <p className="text-lg font-medium text-foreground">{t('singleVehicle.step1.dropzone')}</p>
+                <p className="text-sm text-muted-foreground">{t('singleVehicle.step1.supportedFormats')}</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -91,7 +91,7 @@ export default function AccidentReport() {
                   <Button variant="outline" asChild>
                     <span className="cursor-pointer">
                       <ImageIcon className="w-4 h-4 mr-2" />
-                      {t('report.step1.browseFiles')}
+                      {t('singleVehicle.step1.browseFiles')}
                     </span>
                   </Button>
                 </label>
@@ -105,7 +105,7 @@ export default function AccidentReport() {
                 />
                 <Button variant="secondary" className="max-w-[169px] m-auto sm:m-0 w-full sm:w-auto">
                   <Camera className="w-4 h-4 mr-2" />
-                  {t('report.step1.takePhoto')}
+                  {t('singleVehicle.step1.takePhoto')}
                 </Button>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function AccidentReport() {
             {formData.photos.length > 0 && (
               <div className="flex items-center gap-2 text-sm text-accent">
                 <CheckCircle2 className="w-5 h-5" />
-                <span>{t('report.step1.photosUploaded', { count: formData.photos.length })}</span>
+                <span>{t('singleVehicle.step1.photosUploaded', { count: formData.photos.length })}</span>
               </div>
             )}
           </div>
@@ -123,24 +123,24 @@ export default function AccidentReport() {
         return (
           <div className="space-y-6">
             <div className="text-center space-y-3">
-              <h2 className="font-heading text-h2 text-foreground">{t('report.step2.title')}</h2>
+              <h2 className="font-heading text-h2 text-foreground">{t('singleVehicle.step2.title')}</h2>
               <p className="font-sans text-body text-muted-foreground">
-                {t('report.step2.description')}
+                {t('singleVehicle.step2.description')}
               </p>
             </div>
 
             <div className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="license-plate">{t('report.step2.plateNumber')}</Label>
+                <Label htmlFor="license-plate">{t('singleVehicle.step2.plateNumber')}</Label>
                 <Input
                   id="license-plate"
-                  placeholder={t('report.step2.platePlaceholder')}
+                  placeholder={t('singleVehicle.step2.platePlaceholder')}
                   value={formData.licensePlate}
                   onChange={(e) => setFormData({ ...formData, licensePlate: e.target.value })}
                 />
               </div>
 
-              <p className="text-center text-sm text-muted-foreground">{t('report.step2.orScan')}</p>
+              <p className="text-center text-sm text-muted-foreground">{t('singleVehicle.step2.orScan')}</p>
 
               <div className="border-2 border-border rounded-xl p-8 text-center space-y-4 bg-accent/5">
                 <div className="flex justify-center">
@@ -149,10 +149,10 @@ export default function AccidentReport() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <p className="font-medium text-foreground">{t('report.step2.autoRecognition')}</p>
-                  <p className="text-sm text-muted-foreground">{t('report.step2.pointCamera')}</p>
+                  <p className="font-medium text-foreground">{t('singleVehicle.step2.autoRecognition')}</p>
+                  <p className="text-sm text-muted-foreground">{t('singleVehicle.step2.pointCamera')}</p>
                 </div>
-                <Button variant="default">{t('report.step2.startScanning')}</Button>
+                <Button variant="default">{t('singleVehicle.step2.startScanning')}</Button>
               </div>
             </div>
           </div>
@@ -162,39 +162,41 @@ export default function AccidentReport() {
         return (
           <div className="space-y-6">
             <div className="text-center space-y-3">
-              <h2 className="font-heading text-h2 text-foreground">{t('report.step3.title')}</h2>
+              <h2 className="font-heading text-h2 text-foreground">{t('singleVehicle.step3.title')}</h2>
               <p className="font-sans text-body text-muted-foreground">
-                {t('report.step3.description')}
+                {t('singleVehicle.step3.description')}
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
+              <div className="border border-border rounded-xl p-4 sm:p-6 bg-background">
+                <Label className="text-base font-medium mb-4 block">{t('singleVehicle.step3.accidentTypeLabel')}</Label>
+                <RadioGroup
+                  value={formData.accidentType}
+                  onValueChange={(value) => setFormData({ ...formData, accidentType: value })}
+                  className="space-y-3"
+                >
+                  {ACCIDENT_TYPES.map((type, index) => (
+                    <div key={index} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                      <RadioGroupItem value={type} id={`type-${index}`} />
+                      <Label htmlFor={`type-${index}`} className="cursor-pointer flex-1 font-normal">
+                        {type}
+                      </Label>
+                    </div>
+                  ))}
+                </RadioGroup>
+              </div>
+
               <div className="space-y-2">
-                <Label htmlFor="description">{t('report.step3.incidentDescription')}</Label>
+                <Label htmlFor="description">{t('singleVehicle.step3.descriptionLabel')}</Label>
                 <Textarea
                   id="description"
-                  placeholder={t('report.step3.descriptionPlaceholder')}
+                  placeholder={t('singleVehicle.step3.descriptionPlaceholder')}
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   className="min-h-[150px] resize-none"
                 />
-                <p className="text-xs text-muted-foreground">{t('report.step3.characterCount', { count: formData.description.length })}</p>
-              </div>
-
-              <div className="space-y-3">
-                <Label>{t('report.step3.quickTemplates')}</Label>
-                <p className="text-sm text-muted-foreground">{t('report.step3.selectTemplate')}</p>
-                <div className="space-y-2">
-                  {TEMPLATES.map((template) => (
-                    <button
-                      key={template}
-                      onClick={() => setFormData({ ...formData, description: template })}
-                      className="w-full text-left px-4 py-3 border border-border rounded-lg hover:bg-accent/10 hover:border-accent transition-colors text-sm"
-                    >
-                      {template}
-                    </button>
-                  ))}
-                </div>
+                <p className="text-xs text-muted-foreground">{t('singleVehicle.step3.characterCount', { count: formData.description.length })}</p>
               </div>
             </div>
           </div>
@@ -204,14 +206,14 @@ export default function AccidentReport() {
         return (
           <div className="space-y-6">
             <div className="text-center space-y-3">
-              <h2 className="font-heading text-h2 text-foreground">{t('report.step4.title')}</h2>
+              <h2 className="font-heading text-h2 text-foreground">{t('singleVehicle.step4.title')}</h2>
               <p className="font-sans text-body text-muted-foreground">
-                {t('report.step4.description')}
+                {t('singleVehicle.step4.description')}
               </p>
             </div>
 
             <div className="border border-border rounded-xl p-4 sm:p-6 bg-background">
-              <Label className="text-base font-medium mb-4 block">{t('report.step4.question')}</Label>
+              <Label className="text-base font-medium mb-4 block">{t('singleVehicle.step4.question')}</Label>
               <RadioGroup
                 value={formData.vehicleOwnership}
                 onValueChange={(value) => setFormData({ ...formData, vehicleOwnership: value })}
@@ -220,25 +222,25 @@ export default function AccidentReport() {
                 <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="personal" id="personal" />
                   <Label htmlFor="personal" className="cursor-pointer flex-1 font-normal">
-                    {t('report.step4.personal')}
+                    {t('singleVehicle.step4.personal')}
                   </Label>
                 </div>
                 <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="company" id="company" />
                   <Label htmlFor="company" className="cursor-pointer flex-1 font-normal">
-                    {t('report.step4.company')}
+                    {t('singleVehicle.step4.company')}
                   </Label>
                 </div>
                 <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="rental" id="rental" />
                   <Label htmlFor="rental" className="cursor-pointer flex-1 font-normal">
-                    {t('report.step4.rental')}
+                    {t('singleVehicle.step4.rental')}
                   </Label>
                 </div>
                 <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="borrowed" id="borrowed" />
                   <Label htmlFor="borrowed" className="cursor-pointer flex-1 font-normal">
-                    {t('report.step4.borrowed')}
+                    {t('singleVehicle.step4.borrowed')}
                   </Label>
                 </div>
               </RadioGroup>
@@ -250,9 +252,9 @@ export default function AccidentReport() {
         return (
           <div className="space-y-6">
             <div className="text-center space-y-3">
-              <h2 className="font-heading text-h2 text-foreground">{t('report.step5.title')}</h2>
+              <h2 className="font-heading text-h2 text-foreground">{t('singleVehicle.step5.title')}</h2>
               <p className="font-sans text-body text-muted-foreground">
-                {t('report.step5.description')}
+                {t('singleVehicle.step5.description')}
               </p>
             </div>
 
@@ -267,17 +269,17 @@ export default function AccidentReport() {
                 />
                 <div className="space-y-1">
                   <Label htmlFor="location-consent" className="cursor-pointer font-medium">
-                    {t('report.step5.consent')}
+                    {t('singleVehicle.step5.consent')}
                   </Label>
                   <p className="text-sm text-muted-foreground">
-                    {t('report.step5.consentDesc')}
+                    {t('singleVehicle.step5.consentDesc')}
                   </p>
                 </div>
               </div>
 
               <div className="bg-warning/10 border border-warning/30 rounded-lg p-4">
                 <p className="text-sm text-warning-foreground">
-                  <strong>{t('report.step5.note')}</strong> {t('report.step5.noteText')}
+                  <strong>{t('singleVehicle.step5.note')}</strong> {t('singleVehicle.step5.noteText')}
                 </p>
               </div>
             </div>
@@ -288,101 +290,67 @@ export default function AccidentReport() {
         return (
           <div className="space-y-6">
             <div className="text-center space-y-3">
-              <h2 className="font-heading text-h2 text-foreground">{t('report.step6.title')}</h2>
+              <h2 className="font-heading text-h2 text-foreground">{t('singleVehicle.step6.title')}</h2>
               <p className="font-sans text-body text-muted-foreground">
-                {t('report.step6.description')}
-              </p>
-            </div>
-
-            <div className="border border-border rounded-xl p-4 sm:p-6 bg-background">
-              <Label className="text-base font-medium mb-4 block">{t('report.step6.question')}</Label>
-              <RadioGroup
-                value={formData.otherPartyType}
-                onValueChange={(value) => setFormData({ ...formData, otherPartyType: value })}
-                className="space-y-3"
-              >
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
-                  <RadioGroupItem value="danish-mitid" id="danish-mitid" />
-                  <Label htmlFor="danish-mitid" className="cursor-pointer flex-1 font-normal">
-                    {t('report.step6.danishMitid')}
-                  </Label>
-                </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
-                  <RadioGroupItem value="foreign" id="foreign" />
-                  <Label htmlFor="foreign" className="cursor-pointer flex-1 font-normal">
-                    {t('report.step6.foreign')}
-                  </Label>
-                </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
-                  <RadioGroupItem value="none" id="none" />
-                  <Label htmlFor="none" className="cursor-pointer flex-1 font-normal">
-                    {t('report.step6.none')}
-                  </Label>
-                </div>
-              </RadioGroup>
-            </div>
-          </div>
-        );
-
-      case 7:
-        return (
-          <div className="space-y-6">
-            <div className="text-center space-y-3">
-              <h2 className="font-heading text-h2 text-foreground">{t('report.step7.title')}</h2>
-              <p className="font-sans text-body text-muted-foreground">
-                {t('report.step7.description')}
+                {t('singleVehicle.step6.description')}
               </p>
             </div>
 
             <div className="space-y-4">
               {/* Accident Type Card */}
               <div className="bg-background border border-border rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-3">{t('report.step7.accidentType')}</h3>
-                <p className="text-sm bg-muted/50 inline-block px-3 py-2 rounded-full text-foreground">{t('report.step7.twoVehicle')}</p>
+                <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.accidentType')}</h3>
+                <p className="text-sm bg-muted/50 inline-block px-3 py-2 rounded-full text-foreground">{t('singleVehicle.step6.singleVehicle')}</p>
               </div>
 
               {/* Photos Uploaded Card */}
               <div className="bg-background border border-border rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-3">{t('report.step7.photosUploaded')}</h3>
+                <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.photosUploaded')}</h3>
                 <div className="flex items-center gap-2 text-sm text-accent">
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>{t('report.step7.photosCount', { count: formData.photos.length })}</span>
+                  <span>{t('singleVehicle.step6.photosCount', { count: formData.photos.length })}</span>
                 </div>
               </div>
 
               {/* Vehicle Information Card */}
               <div className="bg-background border border-border rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-3">{t('report.step7.vehicleInfo')}</h3>
+                <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.vehicleInfo')}</h3>
                 <div className="space-y-2">
                   <div className="flex">
-                    <span className="text-sm font-medium text-foreground w-32">{t('report.step7.licensePlate')}</span>
-                    <span className="text-sm text-muted-foreground">{formData.licensePlate || t('report.step7.notProvided')}</span>
+                    <span className="text-sm font-medium text-foreground w-32">{t('singleVehicle.step6.licensePlate')}</span>
+                    <span className="text-sm text-muted-foreground">{formData.licensePlate || t('singleVehicle.step6.notProvided')}</span>
                   </div>
                   <div className="flex">
-                    <span className="text-sm font-medium text-foreground w-32">{t('report.step7.ownership')}</span>
-                    <span className="text-sm text-muted-foreground">{formData.vehicleOwnership || t('report.step7.notSpecified')}</span>
+                    <span className="text-sm font-medium text-foreground w-32">{t('singleVehicle.step6.ownership')}</span>
+                    <span className="text-sm text-muted-foreground">{formData.vehicleOwnership || t('singleVehicle.step6.notSpecified')}</span>
                   </div>
                 </div>
               </div>
 
+              {/* Incident Type Card */}
+              <div className="bg-background border border-border rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.incidentType')}</h3>
+                <p className="text-sm text-muted-foreground">{formData.accidentType || t('singleVehicle.step6.notSpecified')}</p>
+              </div>
+
               {/* Incident Description Card */}
               <div className="bg-background border border-border rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-3">{t('report.step7.incidentDesc')}</h3>
-                <p className="text-sm text-muted-foreground">{formData.description || t('report.step7.noDescription')}</p>
+                <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.incidentDesc')}</h3>
+                <p className="text-sm text-muted-foreground">{formData.description || t('singleVehicle.step6.noDescription')}</p>
               </div>
 
               {/* Complete Report Card */}
               <div className="bg-accent/5 border border-border rounded-xl p-6 space-y-4">
-                <h3 className="font-semibold text-foreground">{t('report.step7.completeReport')}</h3>
+                <h3 className="font-semibold text-foreground">{t('singleVehicle.step6.completeReport')}</h3>
                 <Button className="w-full" size="lg" variant="default">
-                  {t('report.step7.signMitid')}
+                  {t('singleVehicle.step6.signMitid')}
                 </Button>
                 <Button className="w-full" variant="outline" size="lg">
-                  {t('report.step7.downloadPdf')}
+                  {t('singleVehicle.step6.downloadPdf')}
                 </Button>
                 <div className="text-center text-xs text-muted-foreground pt-2">
-                  <p>{t('report.step7.reportId', { id: 'AR-70759526' })}</p>
-                  <p>{t('report.step7.generated', { date: new Date().toLocaleDateString("en-US", { month: "2-digit", day: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }) })}</p>
+                  <p>{t('singleVehicle.step6.reportId', { id: 'SV-70759526' })}</p>
+                  <p>{t('singleVehicle.step6.generated', { date: new Date().toLocaleDateString("en-US", { month: "2-digit", day: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }) })}</p>
                 </div>
               </div>
             </div>
@@ -396,13 +364,13 @@ export default function AccidentReport() {
 
   return (
     <div className="min-h-screen bg-muted/30">
-      <Header showBackButton={true} backButtonText={t('report.backToHome')} handleBack={() => navigate("/accident-type")} type="report" />
+      <Header showBackButton={true} backButtonText={t('singleVehicle.backToHome')} handleBack={() => navigate("/accident-type")} type="single-vehicle-report" />
 
       {/* Title */}
       <div className="bg-background border-b border-border pt-20">
         <div className="container mx-auto px-4 py-6 text-center">
-          <h1 className="font-heading text-h2 text-foreground">{t('report.title')}</h1>
-          <p className="text-sm text-muted-foreground mt-1">{t('report.stepOf', { current: currentStep, total: STEPS.length })}</p>
+          <h1 className="font-heading text-h2 text-foreground">{t('singleVehicle.title')}</h1>
+          <p className="text-sm text-muted-foreground mt-1">{t('singleVehicle.stepOf', { current: currentStep, total: STEPS.length })}</p>
         </div>
       </div>
 
@@ -416,38 +384,34 @@ export default function AccidentReport() {
                   <div className="relative w-full">
                     {index > 0 && (
                       <div
-                        className={`absolute left-0 top-1/2 -translate-y-1/2 h-1 transition-colors ${
-                          currentStep > index ? "bg-primary" : "bg-muted"
-                        }`}
+                        className={`absolute left-0 top-1/2 -translate-y-1/2 h-1 transition-colors ${currentStep > index ? "bg-primary" : "bg-muted"
+                          }`}
                         style={{ width: "calc(50% - 1rem)" }}
                       />
                     )}
                     {index < STEPS.length - 1 && (
                       <div
-                        className={`absolute right-0 top-1/2 -translate-y-1/2 h-1 transition-colors ${
-                          currentStep > step.id ? "bg-primary" : "bg-muted"
-                        }`}
+                        className={`absolute right-0 top-1/2 -translate-y-1/2 h-1 transition-colors ${currentStep > step.id ? "bg-primary" : "bg-muted"
+                          }`}
                         style={{ width: "calc(50% - 1rem)" }}
                       />
                     )}
                     <div className="flex justify-center">
                       <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors relative z-10 ${
-                          currentStep === step.id
+                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors relative z-10 ${currentStep === step.id
                             ? "bg-primary text-primary-foreground"
                             : currentStep > step.id
-                            ? "bg-primary text-primary-foreground"
-                            : "bg-muted text-muted-foreground"
-                        }`}
+                              ? "bg-primary text-primary-foreground"
+                              : "bg-muted text-muted-foreground"
+                          }`}
                       >
                         {currentStep > step.id ? <CheckCircle2 className="w-5 h-5" /> : step.id}
                       </div>
                     </div>
                   </div>
                   <span
-                    className={`hidden sm:inline-block text-xs font-medium transition-colors whitespace-nowrap ${
-                      currentStep === step.id ? "text-primary" : "text-muted-foreground"
-                    }`}
+                    className={`hidden sm:inline-block text-xs font-medium transition-colors whitespace-nowrap ${currentStep === step.id ? "text-primary" : "text-muted-foreground"
+                      }`}
                   >
                     {step.label}
                   </span>
@@ -465,7 +429,7 @@ export default function AccidentReport() {
 
       {/* Content */}
       <div className="container mx-auto px-4 py-8">
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="bg-background border border-border rounded-2xl shadow-soft p-5 sm:p-8 mb-6">
             {renderStepContent()}
           </div>
@@ -479,14 +443,14 @@ export default function AccidentReport() {
               className="flex items-center gap-2"
             >
               <ArrowLeft className="w-4 h-4" />
-              {t('report.previous')}
+              {t('singleVehicle.previous')}
             </Button>
             <Button
               onClick={handleNext}
               disabled={currentStep === STEPS.length}
               className="flex items-center gap-2"
             >
-              {currentStep === STEPS.length ? t('report.complete') : t('report.next')}
+              {currentStep === STEPS.length ? t('singleVehicle.complete') : t('singleVehicle.next')}
               {currentStep < STEPS.length && <ArrowLeft className="w-4 h-4 rotate-180" />}
             </Button>
           </div>
@@ -495,3 +459,4 @@ export default function AccidentReport() {
     </div>
   );
 }
+

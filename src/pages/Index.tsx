@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -8,41 +9,55 @@ import wavebg from "@/assets/wave-bg.jpg";
 import { Camera, FileText, Send, Shield, Clock, CheckCircle } from "lucide-react";
 
 const Index = () => {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const handleStartReport = () => {
+    if(localStorage.getItem('isLoggedIn')){
+      navigate('/report');
+    }else{
+      navigate('/login');
+    }
+  };
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Header type="home" />
       
       {/* Hero Section */}
       <section className="pt-24 xl:pt-28 pb-16 bg-hero-bg bg-cover bg-center bg-no-repeat">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="font-heading text-[34px] lg:text-5xl xl:text-6xl font-bold mb-6 text-foreground !leading-normal text-center md:text-left">
-                Report your damage <span className="text-primary">instantly</span>
+              <h1 className="font-heading text-h1 mb-6 text-foreground text-center md:text-left">
+                {t('hero.title')} <span className="text-primary">{t('hero.titleHighlight')}</span>
               </h1>
-              <p className="text-lg lg:text-xl text-muted-foreground mb-8 text-center md:text-left">
-                Skado makes car damage reporting fast and reliable.
+              <p className="font-sans text-body text-muted-foreground mb-8 text-center md:text-left">
+                {t('hero.subtitle')}
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                <Link to="/report">
-                  <Button variant="hero" size="lg" className="h-12 lg:h-14 px-8 lg:px-10">
-                    Start Report
+                {/* <Link to="/report"> */}
+                  <Button variant="hero" size="lg" className="h-12 lg:h-14 px-8 lg:px-10" onClick={handleStartReport}>
+                    {t('hero.startReport')}
                   </Button>
-                </Link>
+                {/* </Link> */}
+                {/* <Link to="/view-policy">
+                  <Button variant="outline" size="lg" className="h-12 lg:h-14 px-8 lg:px-10">
+                    {t('viewPolicy.title')}
+                  </Button>
+                </Link> */}
                 <a href="#how-it-works">
                   <Button variant="outline" size="lg" className="h-12 lg:h-14 px-8 lg:px-10">
-                    Learn More
+                    {t('hero.learnMore')}
                   </Button>
                 </a>
               </div>
               <div className="mt-8 flex items-center gap-8 text-sm text-muted-foreground justify-center md:justify-start">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-accent" />
-                  <span>No sign-up required</span>
+                  <span>{t('hero.noSignup')}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-accent" />
-                  <span>2-min process</span>
+                  <span>{t('hero.quickProcess')}</span>
                 </div>
               </div>
             </div>
@@ -61,11 +76,11 @@ const Index = () => {
       <section id="how-it-works" className="py-14 md:py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-10 md:mb-16 animate-fade-in">
-            <h2 className="font-heading text-4xl font-bold mb-4 text-foreground">
-              How It Works
+            <h2 className="font-heading text-h2 mb-4 text-foreground">
+              {t('howItWorks.title')}
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Three simple steps to complete your damage report
+            <p className="font-sans text-body text-muted-foreground max-w-2xl mx-auto">
+              {t('howItWorks.subtitle')}
             </p>
           </div>
           
@@ -75,10 +90,10 @@ const Index = () => {
                 <Camera className="h-8 w-8 text-accent" />
               </div>
               <h3 className="font-heading text-xl font-semibold mb-3 text-foreground">
-                Capture Damage Photo
+                {t('howItWorks.step1Title')}
               </h3>
               <p className="text-muted-foreground">
-                Simply take photos of the damage using your phone camera
+                {t('howItWorks.step1Desc')}
               </p>
             </div>
             
@@ -87,10 +102,10 @@ const Index = () => {
                 <FileText className="h-8 w-8 text-accent" />
               </div>
               <h3 className="font-heading text-xl font-semibold mb-3 text-foreground">
-                Auto-Generate Report
+                {t('howItWorks.step2Title')}
               </h3>
               <p className="text-muted-foreground">
-                Our AI instantly creates a detailed damage report for you
+                {t('howItWorks.step2Desc')}
               </p>
             </div>
             
@@ -99,10 +114,10 @@ const Index = () => {
                 <Send className="h-8 w-8 text-accent" />
               </div>
               <h3 className="font-heading text-xl font-semibold mb-3 text-foreground">
-                Send Securely
+                {t('howItWorks.step3Title')}
               </h3>
               <p className="text-muted-foreground">
-                Submit your report directly to your insurance company
+                {t('howItWorks.step3Desc')}
               </p>
             </div>
           </div>
@@ -122,13 +137,13 @@ const Index = () => {
             </div>
             <div className="order-1 lg:order-2 animate-slide-up">
               <div className="inline-block px-4 py-2 bg-primary rounded-full text-white font-medium text-sm mb-6">
-                Trusted by Thousands
+                {t('trust.badge')}
               </div>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-foreground ">
-                As efficient as a tech startup — as trustworthy as an insurance company
+              <h2 className="font-heading text-h2 mb-6 text-foreground ">
+                {t('trust.title')}
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Skado combines cutting-edge technology with insurance-grade reliability to give you the best of both worlds.
+              <p className="font-sans text-body text-muted-foreground mb-8">
+                {t('trust.description')}
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-6">
@@ -137,8 +152,8 @@ const Index = () => {
                     <Shield className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-semibold mb-1 text-foreground">Bank-Level Security</h3>
-                    <p className="text-muted-foreground">Your data is encrypted and protected</p>
+                    <h3 className="font-heading font-semibold text-foreground">{t('trust.security')}</h3>
+                    <p className="text-muted-foreground text-sm">{t('trust.securityDesc')}</p>
                   </div>
                 </div>
                 
@@ -147,8 +162,8 @@ const Index = () => {
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-semibold mb-1 text-foreground">Lightning Fast</h3>
-                    <p className="text-muted-foreground">Complete reports in under 2 minutes</p>
+                    <h3 className="font-heading font-semibold text-foreground">{t('trust.speed')}</h3>
+                    <p className="text-muted-foreground text-sm">{t('trust.speedDesc')}</p>
                   </div>
                 </div>
               </div>
@@ -161,21 +176,27 @@ const Index = () => {
       <section id="contact" className="py-14 md:py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              Ready to Get Started?
+            <h2 className="font-heading text-h2 mb-6 text-foreground">
+              {t('cta.title')}
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Join thousands who've simplified their accident reporting process
+            <p className="font-sans text-body text-muted-foreground mb-8">
+              {t('cta.description')}
             </p>
-            <Link to="/report">
-              <Button variant="hero" size="lg">
-                Start Your Report Now
-              </Button>
-            </Link>
+            <div className="flex flex-wrap gap-4 justify-center">
+              {/* <Link to="/report"> */}
+                <Button variant="hero" size="lg">
+                  {t('cta.button')}
+                </Button>
+              {/* </Link> */}
+              <Link to="/view-policy">
+                <Button variant="outline" size="lg">
+                  {t('viewPolicy.title')}
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

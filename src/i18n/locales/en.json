@@ -1,0 +1,327 @@
+{
+  "header": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "features": "Features",
+    "support": "Support",
+    "login": "Login",
+    "getStarted": "Get Started",
+    "logout": "Logout",
+    "report": "Report"
+  },
+  "hero": {
+    "title": "Report your damage",
+    "titleHighlight": "instantly",
+    "subtitle": "Skado makes car damage reporting fast and reliable.",
+    "startReport": "Start Report",
+    "learnMore": "Learn More",
+    "noSignup": "No sign-up required",
+    "quickProcess": "2-min process"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three simple steps to complete your damage report",
+    "step1Title": "Capture Damage Photo",
+    "step1Desc": "Simply take photos of the damage using your phone camera",
+    "step2Title": "Auto-Generate Report",
+    "step2Desc": "Our AI instantly creates a detailed damage report for you",
+    "step3Title": "Send Securely",
+    "step3Desc": "Submit your report directly to your insurance company"
+  },
+  "trust": {
+    "badge": "Trusted by Thousands",
+    "title": "As efficient as a tech startup — as trustworthy as an insurance company",
+    "description": "Skado combines cutting-edge technology with insurance-grade reliability to give you the best of both worlds.",
+    "security": "Bank-Level Security",
+    "securityDesc": "Your data is encrypted and protected",
+    "speed": "Lightning Fast",
+    "speedDesc": "Complete reports in under 2 minutes"
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Join thousands who've simplified their accident reporting process",
+    "button": "Start Your Report Now"
+  },
+  "footer": {
+    "tagline": "Making car accident reporting simple, fast, and trustworthy.",
+    "product": "Product",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "company": "Company",
+    "about": "About",
+    "support": "Support",
+    "privacy": "Privacy Policy",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved."
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to continue to your account",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "forgotPassword": "Forgot password?",
+    "loginButton": "Login",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "terms": "By signing in, you agree to our Terms of Service and Privacy Policy",
+    "backToHome": "← Back to home"
+  },
+  "register": {
+    "title": "Create Account",
+    "subtitle": "Sign up to get started with your account",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Enter your last name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "••••••••",
+    "registerButton": "Create Account",
+    "hasAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "terms": "By creating an account, you agree to our Terms of Service and Privacy Policy",
+    "backToHome": "← Back to home"
+  },
+  "report": {
+    "backToHome": "Back to Home",
+    "title": "Two-Vehicle Accident Report",
+    "stepOf": "Step {{current}} of {{total}}",
+    "previous": "Previous",
+    "next": "Next",
+    "complete": "Complete",
+    "step1": {
+      "label": "Photos",
+      "title": "Upload Accident Photos",
+      "description": "Take clear photos of vehicle damage, license plates, and the accident scene. Multiple angles help provide better documentation.",
+      "dropzone": "Drop photos here or click to browse",
+      "supportedFormats": "Supports JPEG, PNG up to 10MB each",
+      "browseFiles": "Browse Files",
+      "takePhoto": "Take Photo",
+      "photosUploaded": "{{count}} photo(s) uploaded"
+    },
+    "step2": {
+      "label": "License Plate",
+      "title": "Vehicle License Plate",
+      "description": "Enter the license plate number of your vehicle or use our scanner for automatic detection.",
+      "plateNumber": "License Plate Number",
+      "platePlaceholder": "Enter license plate (e.g., AB12345)",
+      "orScan": "Or scan automatically",
+      "autoRecognition": "Automatic License Plate Recognition",
+      "pointCamera": "Point your camera at the license plate",
+      "startScanning": "Start Scanning"
+    },
+    "step3": {
+      "label": "Description",
+      "title": "Describe the Incident",
+      "description": "Provide a brief description of what happened. Be clear and factual.",
+      "incidentDescription": "Incident Description",
+      "descriptionPlaceholder": "Describe what happened during the accident...",
+      "characterCount": "{{count}}/500 characters",
+      "quickTemplates": "Quick Templates",
+      "selectTemplate": "Select a template to get started:",
+      "template1": "Rear-ended while stopped at traffic light",
+      "template2": "Side collision at intersection",
+      "template3": "Parking lot collision",
+      "template4": "Hit parked vehicle",
+      "template5": "Single vehicle accident - hit barrier/pole"
+    },
+    "step4": {
+      "label": "Vehicle Info",
+      "title": "Vehicle Ownership Information",
+      "description": "Please specify your relationship to the vehicle involved in the accident.",
+      "question": "Who owns this vehicle?",
+      "personal": "Personal vehicle (I own it)",
+      "company": "Company vehicle",
+      "rental": "Rental vehicle",
+      "borrowed": "Borrowed from someone else"
+    },
+    "step5": {
+      "label": "Location",
+      "title": "Accident Location",
+      "description": "We'll capture the GPS coordinates of the accident location for accurate reporting.",
+      "consent": "I consent to sharing my location data",
+      "consentDesc": "Your location will be used only for this accident report and stored securely. This helps provide accurate documentation for insurance and legal purposes.",
+      "note": "Note:",
+      "noteText": "Location data helps provide accurate documentation and can be important for insurance claims and legal proceedings."
+    },
+    "step6": {
+      "label": "Other Party",
+      "title": "Other Party Information",
+      "description": "Help us identify the other party involved in the accident for confirmation.",
+      "question": "Other Party Type",
+      "danishMitid": "Danish resident (with MitID)",
+      "foreign": "Foreign visitor/resident",
+      "none": "No other party involved"
+    },
+    "step7": {
+      "label": "Summary",
+      "title": "Report Summary",
+      "description": "Review your accident report details before finalizing.",
+      "accidentType": "Accident Type",
+      "twoVehicle": "Two-Vehicle Accident",
+      "photosUploaded": "Photos Uploaded",
+      "photosCount": "{{count}} photos uploaded",
+      "vehicleInfo": "Vehicle Information",
+      "licensePlate": "License Plate:",
+      "ownership": "Ownership:",
+      "notProvided": "Not provided",
+      "notSpecified": "Not specified",
+      "incidentDesc": "Incident Description",
+      "noDescription": "No description provided",
+      "completeReport": "Complete Your Report",
+      "signMitid": "Sign with MitID",
+      "downloadPdf": "Download PDF Report",
+      "reportId": "Report ID: {{id}}",
+      "generated": "Generated: {{date}}"
+    }
+  },
+  "accidentType": {
+    "title": "Report Your Accident",
+    "subtitle": "Fast, secure, and legally compliant accident reporting. Get your report generated in minutes with digital signatures and GPS verification.",
+    "twoVehicle": {
+      "title": "Two-Vehicle Accident",
+      "description": "Collision involving another vehicle. We'll help you connect with the other party for confirmation.",
+      "button": "Start Two-Vehicle Report"
+    },
+    "singleVehicle": {
+      "title": "Single-Vehicle Accident",
+      "description": "Solo incident with no other parties involved. Quick and simple reporting process.",
+      "button": "Start Single-Vehicle Report"
+    },
+    "features": {
+      "photo": {
+        "title": "Photo Documentation",
+        "description": "Upload damage photos and license plates with built-in OCR"
+      },
+      "gps": {
+        "title": "GPS Location",
+        "description": "Automatic location capture with timestamp verification"
+      },
+      "pdf": {
+        "title": "Legal PDF Report",
+        "description": "Generate legally compliant reports with digital signatures"
+      }
+    }
+  },
+  "singleVehicle": {
+    "title": "Single-Vehicle Accident Report",
+    "stepOf": "Step {{current}} of {{total}}",
+    "previous": "Previous",
+    "next": "Next",
+    "complete": "Complete",
+    "backToSelection": "Back to Selection",
+    "backToHome": "Back to Home",
+    "step1": {
+      "label": "Photos",
+      "title": "Upload Damage Photos",
+      "description": "Take clear photos of vehicle damage from multiple angles. This helps provide better documentation for your insurance claim.",
+      "dropzone": "Drop photos here or click to browse",
+      "supportedFormats": "Supports JPEG, PNG up to 10MB each",
+      "browseFiles": "Browse Files",
+      "takePhoto": "Take Photo",
+      "photosUploaded": "{{count}} photo(s) uploaded"
+    },
+    "step2": {
+      "label": "License Plate",
+      "title": "Vehicle License Plate",
+      "description": "Enter the license plate number of your vehicle or use our scanner for automatic detection.",
+      "plateNumber": "License Plate Number",
+      "platePlaceholder": "Enter license plate (e.g., AB12345)",
+      "orScan": "Or scan automatically",
+      "autoRecognition": "Automatic License Plate Recognition",
+      "pointCamera": "Point your camera at the license plate",
+      "startScanning": "Start Scanning"
+    },
+    "step3": {
+      "label": "Description",
+      "title": "Describe the Incident",
+      "description": "Provide details about what happened and select the type of incident.",
+      "accidentTypeLabel": "What type of incident occurred?",
+      "descriptionLabel": "Incident Description",
+      "descriptionPlaceholder": "Describe what happened during the incident...",
+      "characterCount": "{{count}}/500 characters"
+    },
+    "step4": {
+      "label": "Vehicle Info",
+      "title": "Vehicle Ownership Information",
+      "description": "Please specify your relationship to the vehicle involved in the incident.",
+      "question": "Who owns this vehicle?",
+      "personal": "Personal vehicle (I own it)",
+      "company": "Company vehicle",
+      "rental": "Rental vehicle",
+      "borrowed": "Borrowed from someone else"
+    },
+    "step5": {
+      "label": "Location",
+      "title": "Incident Location",
+      "description": "We'll capture the GPS coordinates of the incident location for accurate reporting.",
+      "consent": "I consent to sharing my location data",
+      "consentDesc": "Your location will be used only for this incident report and stored securely. This helps provide accurate documentation for insurance and legal purposes.",
+      "note": "Note:",
+      "noteText": "Location data helps provide accurate documentation and can be important for insurance claims and legal proceedings."
+    },
+    "step6": {
+      "label": "Summary",
+      "title": "Report Summary",
+      "description": "Review your incident report details before finalizing.",
+      "accidentType": "Incident Type",
+      "singleVehicle": "Single-Vehicle Incident",
+      "photosUploaded": "Photos Uploaded",
+      "photosCount": "{{count}} photos uploaded",
+      "vehicleInfo": "Vehicle Information",
+      "licensePlate": "License Plate:",
+      "ownership": "Ownership:",
+      "notProvided": "Not provided",
+      "notSpecified": "Not specified",
+      "incidentType": "Incident Type",
+      "incidentDesc": "Incident Description",
+      "noDescription": "No description provided",
+      "completeReport": "Complete Your Report",
+      "signMitid": "Sign with MitID",
+      "downloadPdf": "Download PDF Report",
+      "reportId": "Report ID: {{id}}",
+      "generated": "Generated: {{date}}"
+    },
+    "accidentTypes": {
+      "collision": "Collision with object/barrier",
+      "damage": "Vehicle damage (parking, etc.)",
+      "vandalism": "Vandalism or theft",
+      "weather": "Weather-related damage",
+      "other": "Other incident"
+    }
+  },
+  "notFound": {
+    "pageNotFoundTitle": "404",
+    "pageNotFound": "Oops! Page not found",
+    "returnToHome": "Return to Home"
+  },
+  "viewPolicy": {
+    "title": "View Policy",
+    "subtitle": "Access and manage your insurance policy information",
+    "policyNumber": "Policy Number",
+    "policyNumberPlaceholder": "Enter your policy number",
+    "searchPolicy": "Search Policy",
+    "policyDetails": "Policy Details",
+    "policyHolder": "Policy Holder",
+    "vehicleInfo": "Vehicle Information",
+    "coverage": "Coverage Details",
+    "premium": "Premium Information",
+    "effectiveDate": "Effective Date",
+    "expirationDate": "Expiration Date",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "expired": "Expired",
+    "downloadPolicy": "Download Policy",
+    "contactSupport": "Contact Support",
+    "noPolicyFound": "No policy found with the provided number",
+    "searchAgain": "Search Again",
+    "backToHome": "Back to Home"
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "header": {
+    "home": "Hjem",
+    "howItWorks": "Sådan virker det",
+    "features": "Funktioner",
+    "support": "Support",
+    "login": "Log ind",
+    "getStarted": "Kom i gang",
+    "logout": "Log ud",
+    "report": "Anmeldelse"
+  },
+  "hero": {
+    "title": "Anmeld din skade",
+    "titleHighlight": "øjeblikkeligt",
+    "subtitle": "Skado gør bilskadeanmeldelse hurtig og pålidelig.",
+    "startReport": "Start anmeldelse",
+    "learnMore": "Læs mere",
+    "noSignup": "Ingen tilmelding påkrævet",
+    "quickProcess": "2-minutters proces"
+  },
+  "howItWorks": {
+    "title": "Sådan virker det",
+    "subtitle": "Tre enkle trin for at færdiggøre din skadeanmeldelse",
+    "step1Title": "Tag billede af skade",
+    "step1Desc": "Tag blot billeder af skaden med dit telefons kamera",
+    "step2Title": "Auto-generer rapport",
+    "step2Desc": "Vores AI opretter øjeblikkeligt en detaljeret skaderapport til dig",
+    "step3Title": "Send sikkert",
+    "step3Desc": "Send din rapport direkte til dit forsikringsselskab"
+  },
+  "trust": {
+    "badge": "Betroet af tusindvis",
+    "title": "Lige så effektiv som en tech startup — lige så pålidelig som et forsikringsselskab",
+    "description": "Skado kombinerer banebrydende teknologi med forsikringspålidelighed for at give dig det bedste fra begge verdener.",
+    "security": "Bank-niveau sikkerhed",
+    "securityDesc": "Dine data er krypteret og beskyttet",
+    "speed": "Lynhurtig",
+    "speedDesc": "Fuldfør rapporter på under 2 minutter"
+  },
+  "cta": {
+    "title": "Klar til at komme i gang?",
+    "description": "Bliv medlem af tusinder, der har forenklet deres uheldsrapporteringsproces",
+    "button": "Start din rapport nu"
+  },
+  "footer": {
+    "tagline": "Gør bilulykkes rapportering enkel, hurtig og pålidelig.",
+    "product": "Produkt",
+    "features": "Funktioner",
+    "howItWorks": "Sådan virker det",
+    "pricing": "Priser",
+    "company": "Virksomhed",
+    "about": "Om os",
+    "support": "Support",
+    "privacy": "Privatlivspolitik",
+    "followUs": "Følg os",
+    "rights": "Alle rettigheder forbeholdes."
+  },
+  "login": {
+    "title": "Velkommen tilbage",
+    "subtitle": "Log ind for at fortsætte til din konto",
+    "email": "E-mail",
+    "emailPlaceholder": "dig@eksempel.dk",
+    "password": "Adgangskode",
+    "passwordPlaceholder": "••••••••",
+    "forgotPassword": "Glemt adgangskode?",
+    "loginButton": "Log ind",
+    "noAccount": "Har du ikke en konto?",
+    "signUp": "Tilmeld dig",
+    "terms": "Ved at logge ind accepterer du vores servicevilkår og privatlivspolitik",
+    "backToHome": "← Tilbage til hjem"
+  },
+  "register": {
+    "title": "Opret konto",
+    "subtitle": "Tilmeld dig for at komme i gang med din konto",
+    "firstName": "Fornavn",
+    "firstNamePlaceholder": "Indtast dit fornavn",
+    "lastName": "Efternavn",
+    "lastNamePlaceholder": "Indtast dit efternavn",
+    "email": "E-mail",
+    "emailPlaceholder": "dig@eksempel.dk",
+    "password": "Adgangskode",
+    "passwordPlaceholder": "••••••••",
+    "confirmPassword": "Bekræft adgangskode",
+    "confirmPasswordPlaceholder": "••••••••",
+    "registerButton": "Opret konto",
+    "hasAccount": "Har du allerede en konto?",
+    "signIn": "Log ind",
+    "terms": "Ved at oprette en konto accepterer du vores servicevilkår og privatlivspolitik",
+    "backToHome": "← Tilbage til hjem"
+  },
+  "report": {
+    "backToHome": "Tilbage til hjem",
+    "title": "To-køretøjs uheldsrapport",
+    "stepOf": "Trin {{current}} af {{total}}",
+    "previous": "Forrige",
+    "next": "Næste",
+    "complete": "Fuldfør",
+    "step1": {
+      "label": "Billeder",
+      "title": "Upload ulykkebilleder",
+      "description": "Tag klare billeder af køretøjsskader, nummerplader og uheldsstedet. Flere vinkler hjælper med bedre dokumentation.",
+      "dropzone": "Slip billeder her eller klik for at gennemse",
+      "supportedFormats": "Understøtter JPEG, PNG op til 10MB hver",
+      "browseFiles": "Gennemse filer",
+      "takePhoto": "Tag billede",
+      "photosUploaded": "{{count}} billede(r) uploadet"
+    },
+    "step2": {
+      "label": "Nummerplade",
+      "title": "Køretøjs nummerplade",
+      "description": "Indtast nummerplade på dit køretøj eller brug vores scanner til automatisk registrering.",
+      "plateNumber": "Nummerpladenummer",
+      "platePlaceholder": "Indtast nummerplade (f.eks. AB12345)",
+      "orScan": "Eller scan automatisk",
+      "autoRecognition": "Automatisk nummerpladeregistrering",
+      "pointCamera": "Ret dit kamera mod nummerpladen",
+      "startScanning": "Start scanning"
+    },
+    "step3": {
+      "label": "Beskrivelse",
+      "title": "Beskriv hændelsen",
+      "description": "Giv en kort beskrivelse af hvad der skete. Vær klar og faktuel.",
+      "incidentDescription": "Hændelsesbeskrivelse",
+      "descriptionPlaceholder": "Beskriv hvad der skete under ulykken...",
+      "characterCount": "{{count}}/500 tegn",
+      "quickTemplates": "Hurtige skabeloner",
+      "selectTemplate": "Vælg en skabelon for at komme i gang:",
+      "template1": "Påkørt bagfra mens jeg holdt ved trafiklyse",
+      "template2": "Sidekollision ved kryds",
+      "template3": "Kollision på parkeringsplads",
+      "template4": "Ramte parkeret køretøj",
+      "template5": "Enkelt køretøjsulykke - ramte autoværn/stolpe"
+    },
+    "step4": {
+      "label": "Køretøjsinfo",
+      "title": "Køretøjsoplysninger",
+      "description": "Angiv venligst dit forhold til det involverede køretøj i ulykken.",
+      "question": "Hvem ejer dette køretøj?",
+      "personal": "Personligt køretøj (jeg ejer det)",
+      "company": "Firmabil",
+      "rental": "Lejebil",
+      "borrowed": "Lånt af en anden"
+    },
+    "step5": {
+      "label": "Placering",
+      "title": "Uheldssted",
+      "description": "Vi vil registrere GPS-koordinaterne for uheldsstedet til nøjagtig rapportering.",
+      "consent": "Jeg giver samtykke til at dele mine placeringsdata",
+      "consentDesc": "Din placering vil kun blive brugt til denne uheldsrapport og opbevares sikkert. Dette hjælper med at give nøjagtig dokumentation til forsikrings- og juridiske formål.",
+      "note": "Bemærk:",
+      "noteText": "Placeringsdata hjælper med at give nøjagtig dokumentation og kan være vigtigt for forsikringskrav og retssager."
+    },
+    "step6": {
+      "label": "Modpart",
+      "title": "Modpartoplysninger",
+      "description": "Hjælp os med at identificere den anden part involveret i ulykken til bekræftelse.",
+      "question": "Modpartstype",
+      "danishMitid": "Dansk bopæl (med MitID)",
+      "foreign": "Udenlandsk besøgende/bopæl",
+      "none": "Ingen anden part involveret"
+    },
+    "step7": {
+      "label": "Opsummering",
+      "title": "Rapportoversigt",
+      "description": "Gennemse dine uheldsrapportoplysninger før færdiggørelse.",
+      "accidentType": "Uheldstype",
+      "twoVehicle": "To-køretøjs ulykke",
+      "photosUploaded": "Billeder uploadet",
+      "photosCount": "{{count}} billeder uploadet",
+      "vehicleInfo": "Køretøjsoplysninger",
+      "licensePlate": "Nummerplade:",
+      "ownership": "Ejerskab:",
+      "notProvided": "Ikke angivet",
+      "notSpecified": "Ikke specificeret",
+      "incidentDesc": "Hændelsesbeskrivelse",
+      "noDescription": "Ingen beskrivelse angivet",
+      "completeReport": "Fuldfør din rapport",
+      "signMitid": "Underskriv med MitID",
+      "downloadPdf": "Download PDF-rapport",
+      "reportId": "Rapport-ID: {{id}}",
+      "generated": "Genereret: {{date}}"
+    }
+  },
+  "accidentType": {
+    "title": "Anmeld din ulykke",
+    "subtitle": "Hurtig, sikker og juridisk overensstemmende uheldsrapportering. Få din rapport genereret på minutter med digitale underskrifter og GPS-verifikation.",
+    "twoVehicle": {
+      "title": "To-køretøjs ulykke",
+      "description": "Kollision med et andet køretøj. Vi hjælper dig med at komme i kontakt med modparten til bekræftelse.",
+      "button": "Start to-køretøjs rapport"
+    },
+    "singleVehicle": {
+      "title": "Enkelt køretøjs ulykke",
+      "description": "Enkelt hændelse uden andre involverede parter. Hurtig og simpel rapporteringsproces.",
+      "button": "Start enkelt køretøjs rapport"
+    },
+    "features": {
+      "photo": {
+        "title": "Billeddokumentation",
+        "description": "Upload skadebilleder og nummerplader med indbygget OCR"
+      },
+      "gps": {
+        "title": "GPS-placering",
+        "description": "Automatisk placeringsregistrering med tidsstempelverifikation"
+      },
+      "pdf": {
+        "title": "Juridisk PDF-rapport",
+        "description": "Generer juridisk overensstemmende rapporter med digitale underskrifter"
+      }
+    }
+  },
+  "singleVehicle": {
+    "title": "Enkelt køretøjs uheldsrapport",
+    "stepOf": "Trin {{current}} af {{total}}",
+    "previous": "Forrige",
+    "next": "Næste",
+    "complete": "Fuldfør",
+    "backToSelection": "Tilbage til valg",
+    "backToHome": "Tilbage til hjem",
+    "step1": {
+      "label": "Billeder",
+      "title": "Upload skadebilleder",
+      "description": "Tag klare billeder af køretøjsskader fra flere vinkler. Dette hjælper med bedre dokumentation til dit forsikringskrav.",
+      "dropzone": "Slip billeder her eller klik for at gennemse",
+      "supportedFormats": "Understøtter JPEG, PNG op til 10MB hver",
+      "browseFiles": "Gennemse filer",
+      "takePhoto": "Tag billede",
+      "photosUploaded": "{{count}} billede(r) uploadet"
+    },
+    "step2": {
+      "label": "Nummerplade",
+      "title": "Køretøjs nummerplade",
+      "description": "Indtast nummerplade på dit køretøj eller brug vores scanner til automatisk registrering.",
+      "plateNumber": "Nummerpladenummer",
+      "platePlaceholder": "Indtast nummerplade (f.eks. AB12345)",
+      "orScan": "Eller scan automatisk",
+      "autoRecognition": "Automatisk nummerpladeregistrering",
+      "pointCamera": "Ret dit kamera mod nummerpladen",
+      "startScanning": "Start scanning"
+    },
+    "step3": {
+      "label": "Beskrivelse",
+      "title": "Beskriv hændelsen",
+      "description": "Giv detaljer om hvad der skete og vælg typen af hændelse.",
+      "accidentTypeLabel": "Hvilken type hændelse opstod?",
+      "descriptionLabel": "Hændelsesbeskrivelse",
+      "descriptionPlaceholder": "Beskriv hvad der skete under hændelsen...",
+      "characterCount": "{{count}}/500 tegn"
+    },
+    "step4": {
+      "label": "Køretøjsinfo",
+      "title": "Køretøjsoplysninger",
+      "description": "Angiv venligst dit forhold til det involverede køretøj i hændelsen.",
+      "question": "Hvem ejer dette køretøj?",
+      "personal": "Personligt køretøj (jeg ejer det)",
+      "company": "Firmabil",
+      "rental": "Lejebil",
+      "borrowed": "Lånt af en anden"
+    },
+    "step5": {
+      "label": "Placering",
+      "title": "Hændelsessted",
+      "description": "Vi vil registrere GPS-koordinaterne for hændelsesstedet til nøjagtig rapportering.",
+      "consent": "Jeg giver samtykke til at dele mine placeringsdata",
+      "consentDesc": "Din placering vil kun blive brugt til denne hændelsesrapport og opbevares sikkert. Dette hjælper med at give nøjagtig dokumentation til forsikrings- og juridiske formål.",
+      "note": "Bemærk:",
+      "noteText": "Placeringsdata hjælper med at give nøjagtig dokumentation og kan være vigtigt for forsikringskrav og retssager."
+    },
+    "step6": {
+      "label": "Opsummering",
+      "title": "Rapportoversigt",
+      "description": "Gennemse dine hændelsesrapportoplysninger før færdiggørelse.",
+      "accidentType": "Hændelsestype",
+      "singleVehicle": "Enkelt køretøjs hændelse",
+      "photosUploaded": "Billeder uploadet",
+      "photosCount": "{{count}} billeder uploadet",
+      "vehicleInfo": "Køretøjsoplysninger",
+      "licensePlate": "Nummerplade:",
+      "ownership": "Ejerskab:",
+      "notProvided": "Ikke angivet",
+      "notSpecified": "Ikke specificeret",
+      "incidentType": "Hændelsestype",
+      "incidentDesc": "Hændelsesbeskrivelse",
+      "noDescription": "Ingen beskrivelse angivet",
+      "completeReport": "Fuldfør din rapport",
+      "signMitid": "Underskriv med MitID",
+      "downloadPdf": "Download PDF-rapport",
+      "reportId": "Rapport-ID: {{id}}",
+      "generated": "Genereret: {{date}}"
+    },
+    "accidentTypes": {
+      "collision": "Kollision med objekt/autoværn",
+      "damage": "Køretøjsskade (parkering, osv.)",
+      "vandalism": "Hærværk eller tyveri",
+      "weather": "Vejrrelateret skade",
+      "other": "Anden hændelse"
+    }
+  },
+  "notFound": {
+    "pageNotFoundTitle": "404",
+    "pageNotFound": "Oops! Side ikke fundet",
+    "returnToHome": "Tilbage til hjem"
+  },
+  "viewPolicy": {
+    "title": "Se police",
+    "subtitle": "Få adgang til og administrer dine forsikringspoliceoplysninger",
+    "policyNumber": "Policenummer",
+    "policyNumberPlaceholder": "Indtast dit policenummer",
+    "searchPolicy": "Søg police",
+    "policyDetails": "Policedetaljer",
+    "policyHolder": "Policeindehaver",
+    "vehicleInfo": "Køretøjsoplysninger",
+    "coverage": "Dækningsdetaljer",
+    "premium": "Præmieoplysninger",
+    "effectiveDate": "Gyldig fra",
+    "expirationDate": "Udløbsdato",
+    "status": "Status",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "expired": "Udløbet",
+    "downloadPolicy": "Download police",
+    "contactSupport": "Kontakt support",
+    "noPolicyFound": "Ingen police fundet med det angivne nummer",
+    "searchAgain": "Søg igen",
+    "backToHome": "Tilbage til hjem"
+  }
+}
+

@@ -64,6 +64,11 @@ export default {
         sans: ['Inter', 'sans-serif'],
         heading: ['Poppins', 'sans-serif'],
       },
+      fontSize: {
+        'h1': ['36px', { lineHeight: '1.2', fontWeight: '700' }], // Poppins Bold 36px
+        'h2': ['24px', { lineHeight: '1.3', fontWeight: '600' }], // Poppins SemiBold 24px
+        'body': ['16px', { lineHeight: '1.5', fontWeight: '400' }], // Inter Regular 16px
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
