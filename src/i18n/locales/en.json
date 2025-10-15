@@ -157,7 +157,12 @@
       "question": "Other Party Type",
       "danishMitid": "Danish resident (with MitID)",
       "foreign": "Foreign visitor/resident",
-      "none": "No other party involved"
+      "none": "No other party involved",
+      "otherPartyName": "Other Party Name",
+      "otherPartyNamePlaceholder": "Full name (as on ID)",
+      "otherPartyPhone": "Phone Number",
+      "otherPartyPhonePlaceholder": "+45 12 34 56 78",
+      "smsNote": "We'll send an SMS with the description so they can confirm the details."
     },
     "step7": {
       "label": "Summary",
@@ -178,7 +183,10 @@
       "signMitid": "Sign with MitID",
       "downloadPdf": "Download PDF Report",
       "reportId": "Report ID: {{id}}",
-      "generated": "Generated: {{date}}"
+      "generated": "Generated: {{date}}",
+      "otherPartyContact": "Other Party Contact",
+      "name": "Name:",
+      "phone": "Phone:"
     }
   },
   "accidentType": {

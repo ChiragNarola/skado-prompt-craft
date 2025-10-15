@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import heroImage from "@/assets/hero-image1.jpg";
-import trustImage from "@/assets/hero-bg.jpg";
+import trustImage from "@/assets/car_damage_image.png";
 import wavebg from "@/assets/wave-bg.jpg";
 import { Camera, FileText, Send, Shield, Clock, CheckCircle } from "lucide-react";
 
@@ -12,38 +12,36 @@ const Index = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const handleStartReport = () => {
-    if(localStorage.getItem('isLoggedIn')){
-      navigate('/report');
-    }else{
+    navigate('/report');
+  };
+
+  const handleViewPolicy = () => {
+    if (localStorage.getItem('isLoggedIn')) {
+      navigate('/view-policy');
+    } else {
       navigate('/login');
     }
   };
+
   return (
     <div className="min-h-screen flex flex-col">
-      <Header type="home" />
-      
+      <Header />
+
       {/* Hero Section */}
       <section className="pt-24 xl:pt-28 pb-16 bg-hero-bg bg-cover bg-center bg-no-repeat">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="font-heading text-h1 mb-6 text-foreground text-center md:text-left">
+              <h1 className="font-heading text-h1 text-foreground text-center md:text-left">
                 {t('hero.title')} <span className="text-primary">{t('hero.titleHighlight')}</span>
               </h1>
               <p className="font-sans text-body text-muted-foreground mb-8 text-center md:text-left">
                 {t('hero.subtitle')}
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                {/* <Link to="/report"> */}
-                  <Button variant="hero" size="lg" className="h-12 lg:h-14 px-8 lg:px-10" onClick={handleStartReport}>
-                    {t('hero.startReport')}
-                  </Button>
-                {/* </Link> */}
-                {/* <Link to="/view-policy">
-                  <Button variant="outline" size="lg" className="h-12 lg:h-14 px-8 lg:px-10">
-                    {t('viewPolicy.title')}
-                  </Button>
-                </Link> */}
+                <Button variant="hero" size="lg" className="h-12 lg:h-14 px-8 lg:px-10" onClick={handleStartReport}>
+                  {t('hero.startReport')}
+                </Button>
                 <a href="#how-it-works">
                   <Button variant="outline" size="lg" className="h-12 lg:h-14 px-8 lg:px-10">
                     {t('hero.learnMore')}
@@ -62,9 +60,9 @@ const Index = () => {
               </div>
             </div>
             <div className="animate-slide-up">
-              <img 
-                src={heroImage} 
-                alt="Car damage reporting"
+              <img
+                src={heroImage}
+                alt="Car accident damage illustration showing collision and vehicle damage"
                 className="w-[75%] mx-auto rounded-sm"
               />
             </div>
@@ -83,7 +81,7 @@ const Index = () => {
               {t('howItWorks.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center p-6 rounded-2xl bg-card shadow-soft hover:shadow-strong transition-all animate-fade-in">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
@@ -96,7 +94,7 @@ const Index = () => {
                 {t('howItWorks.step1Desc')}
               </p>
             </div>
-            
+
             <div className="text-center p-6 rounded-2xl bg-card shadow-soft hover:shadow-strong transition-all animate-fade-in" style={{ animationDelay: "0.1s" }}>
               <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
                 <FileText className="h-8 w-8 text-accent" />
@@ -108,7 +106,7 @@ const Index = () => {
                 {t('howItWorks.step2Desc')}
               </p>
             </div>
-            
+
             <div className="text-center p-6 rounded-2xl bg-card shadow-soft hover:shadow-strong transition-all animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
                 <Send className="h-8 w-8 text-accent" />
@@ -129,9 +127,9 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 animate-fade-in">
-              <img 
-                src={trustImage} 
-                alt="Professional service"
+              <img
+                src={trustImage}
+                alt="Insurance claim process and car damage assessment"
                 className="w-full xl:w-[85%] rounded-sm mx-auto"
               />
             </div>
@@ -145,7 +143,7 @@ const Index = () => {
               <p className="font-sans text-body text-muted-foreground mb-8">
                 {t('trust.description')}
               </p>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-6">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 mt-1">
@@ -156,7 +154,7 @@ const Index = () => {
                     <p className="text-muted-foreground text-sm">{t('trust.securityDesc')}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 mt-1">
                     <Clock className="h-6 w-6 text-primary" />
@@ -184,15 +182,15 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               {/* <Link to="/report"> */}
-                <Button variant="hero" size="lg">
-                  {t('cta.button')}
-                </Button>
+              <Button variant="hero" size="lg">
+                {t('cta.button')}
+              </Button>
               {/* </Link> */}
-              <Link to="/view-policy">
-                <Button variant="outline" size="lg">
-                  {t('viewPolicy.title')}
-                </Button>
-              </Link>
+
+              <Button variant="outline" size="lg" onClick={handleViewPolicy}>
+                {t('viewPolicy.title')}
+              </Button>
+
             </div>
           </div>
         </div>

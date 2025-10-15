@@ -40,6 +40,8 @@ export default function AccidentReport() {
     vehicleOwnership: "",
     locationConsent: false,
     otherPartyType: "",
+    otherPartyName: "",
+    otherPartyPhone: "",
   });
 
   const progress = (currentStep / STEPS.length) * 100;
@@ -217,25 +219,25 @@ export default function AccidentReport() {
                 onValueChange={(value) => setFormData({ ...formData, vehicleOwnership: value })}
                 className="space-y-3"
               >
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="personal" id="personal" />
                   <Label htmlFor="personal" className="cursor-pointer flex-1 font-normal">
                     {t('report.step4.personal')}
                   </Label>
                 </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="company" id="company" />
                   <Label htmlFor="company" className="cursor-pointer flex-1 font-normal">
                     {t('report.step4.company')}
                   </Label>
                 </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="rental" id="rental" />
                   <Label htmlFor="rental" className="cursor-pointer flex-1 font-normal">
                     {t('report.step4.rental')}
                   </Label>
                 </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="borrowed" id="borrowed" />
                   <Label htmlFor="borrowed" className="cursor-pointer flex-1 font-normal">
                     {t('report.step4.borrowed')}
@@ -294,32 +296,56 @@ export default function AccidentReport() {
               </p>
             </div>
 
-            <div className="border border-border rounded-xl p-4 sm:p-6 bg-background">
+            <div className="border border-border rounded-xl p-4 sm:p-6 bg-background space-y-5">
               <Label className="text-base font-medium mb-4 block">{t('report.step6.question')}</Label>
               <RadioGroup
                 value={formData.otherPartyType}
                 onValueChange={(value) => setFormData({ ...formData, otherPartyType: value })}
                 className="space-y-3"
               >
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="danish-mitid" id="danish-mitid" />
                   <Label htmlFor="danish-mitid" className="cursor-pointer flex-1 font-normal">
                     {t('report.step6.danishMitid')}
                   </Label>
                 </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="foreign" id="foreign" />
                   <Label htmlFor="foreign" className="cursor-pointer flex-1 font-normal">
                     {t('report.step6.foreign')}
                   </Label>
                 </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="none" id="none" />
                   <Label htmlFor="none" className="cursor-pointer flex-1 font-normal">
                     {t('report.step6.none')}
                   </Label>
                 </div>
               </RadioGroup>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="other-party-name">{t('report.step6.otherPartyName')}</Label>
+                  <Input
+                    id="other-party-name"
+                    placeholder={t('report.step6.otherPartyNamePlaceholder')}
+                    value={formData.otherPartyName}
+                    onChange={(e) => setFormData({ ...formData, otherPartyName: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="other-party-phone">{t('report.step6.otherPartyPhone')}</Label>
+                  <Input
+                    id="other-party-phone"
+                    type="tel"
+                    inputMode="tel"
+                    placeholder={t('report.step6.otherPartyPhonePlaceholder')}
+                    value={formData.otherPartyPhone}
+                    onChange={(e) => setFormData({ ...formData, otherPartyPhone: e.target.value })}
+                  />
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground">{t('report.step6.smsNote')}</p>
             </div>
           </div>
         );
@@ -335,13 +361,11 @@ export default function AccidentReport() {
             </div>
 
             <div className="space-y-4">
-              {/* Accident Type Card */}
               <div className="bg-background border border-border rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-3">{t('report.step7.accidentType')}</h3>
                 <p className="text-sm bg-muted/50 inline-block px-3 py-2 rounded-full text-foreground">{t('report.step7.twoVehicle')}</p>
               </div>
 
-              {/* Photos Uploaded Card */}
               <div className="bg-background border border-border rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-3">{t('report.step7.photosUploaded')}</h3>
                 <div className="flex items-center gap-2 text-sm text-accent">
@@ -350,7 +374,6 @@ export default function AccidentReport() {
                 </div>
               </div>
 
-              {/* Vehicle Information Card */}
               <div className="bg-background border border-border rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-3">{t('report.step7.vehicleInfo')}</h3>
                 <div className="space-y-2">
@@ -365,13 +388,25 @@ export default function AccidentReport() {
                 </div>
               </div>
 
-              {/* Incident Description Card */}
               <div className="bg-background border border-border rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-3">{t('report.step7.incidentDesc')}</h3>
                 <p className="text-sm text-muted-foreground">{formData.description || t('report.step7.noDescription')}</p>
               </div>
 
-              {/* Complete Report Card */}
+              <div className="bg-background border border-border rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-3">{t('report.step7.otherPartyContact')}</h3>
+                <div className="space-y-2">
+                  <div className="flex">
+                    <span className="text-sm font-medium text-foreground w-32">{t('report.step7.name')}</span>
+                    <span className="text-sm text-muted-foreground">{formData.otherPartyName || t('report.step7.notProvided')}</span>
+                  </div>
+                  <div className="flex">
+                    <span className="text-sm font-medium text-foreground w-32">{t('report.step7.phone')}</span>
+                    <span className="text-sm text-muted-foreground">{formData.otherPartyPhone || t('report.step7.notProvided')}</span>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-accent/5 border border-border rounded-xl p-6 space-y-4">
                 <h3 className="font-semibold text-foreground">{t('report.step7.completeReport')}</h3>
                 <Button className="w-full" size="lg" variant="default">
@@ -396,9 +431,8 @@ export default function AccidentReport() {
 
   return (
     <div className="min-h-screen bg-muted/30">
-      <Header showBackButton={true} backButtonText={t('report.backToHome')} handleBack={() => navigate("/accident-type")} type="report" />
+      <Header />
 
-      {/* Title */}
       <div className="bg-background border-b border-border pt-20">
         <div className="container mx-auto px-4 py-6 text-center">
           <h1 className="font-heading text-h2 text-foreground">{t('report.title')}</h1>
@@ -406,7 +440,6 @@ export default function AccidentReport() {
         </div>
       </div>
 
-      {/* Progress Steps */}
       <div className="bg-background border-b border-border">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4 overflow-x-auto">
@@ -416,24 +449,21 @@ export default function AccidentReport() {
                   <div className="relative w-full">
                     {index > 0 && (
                       <div
-                        className={`absolute left-0 top-1/2 -translate-y-1/2 h-1 transition-colors ${
-                          currentStep > index ? "bg-primary" : "bg-muted"
+                        className={`absolute left-0 top-1/2 -translate-y-1/2 h-1 transition-colors ${currentStep > index ? "bg-primary" : "bg-muted"
                         }`}
                         style={{ width: "calc(50% - 1rem)" }}
                       />
                     )}
                     {index < STEPS.length - 1 && (
                       <div
-                        className={`absolute right-0 top-1/2 -translate-y-1/2 h-1 transition-colors ${
-                          currentStep > step.id ? "bg-primary" : "bg-muted"
+                        className={`absolute right-0 top-1/2 -translate-y-1/2 h-1 transition-colors ${currentStep > step.id ? "bg-primary" : "bg-muted"
                         }`}
                         style={{ width: "calc(50% - 1rem)" }}
                       />
                     )}
                     <div className="flex justify-center">
                       <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors relative z-10 ${
-                          currentStep === step.id
+                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors relative z-10 ${currentStep === step.id
                             ? "bg-primary text-primary-foreground"
                             : currentStep > step.id
                             ? "bg-primary text-primary-foreground"
@@ -444,11 +474,7 @@ export default function AccidentReport() {
                       </div>
                     </div>
                   </div>
-                  <span
-                    className={`hidden sm:inline-block text-xs font-medium transition-colors whitespace-nowrap ${
-                      currentStep === step.id ? "text-primary" : "text-muted-foreground"
-                    }`}
-                  >
+                  <span className={`hidden sm:inline-block text-xs font-medium transition-colors whitespace-nowrap ${currentStep === step.id ? "text-primary" : "text-muted-foreground"}`}>
                     {step.label}
                   </span>
                 </div>
@@ -458,19 +484,16 @@ export default function AccidentReport() {
         </div>
       </div>
 
-      {/* Progress Bar */}
       <div className="container mx-auto px-4 pt-0">
         <Progress value={progress} className="h-1" />
       </div>
 
-      {/* Content */}
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-xl mx-auto">
           <div className="bg-background border border-border rounded-2xl shadow-soft p-5 sm:p-8 mb-6">
             {renderStepContent()}
           </div>
 
-          {/* Navigation */}
           <div className="flex justify-between gap-4">
             <Button
               variant="outline"

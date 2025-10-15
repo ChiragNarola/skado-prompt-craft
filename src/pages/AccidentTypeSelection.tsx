@@ -11,10 +11,10 @@ const AccidentTypeSelection = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header showViewPolicyButton={true} handleBack={() => navigate('/')} backButtonText={t('viewPolicy.title')} />
-
+      <Header />
       {/* Main Content */}
-      <main className="flex-1 pt-24 pb-16">
+      {/* <main className="flex-1 pt-24 pb-16"> */}
+      <main className="pt-24 pb-16 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-12 animate-fade-in">

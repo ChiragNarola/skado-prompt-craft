@@ -177,7 +177,7 @@ export default function SingleVehicleReport() {
                   className="space-y-3"
                 >
                   {ACCIDENT_TYPES.map((type, index) => (
-                    <div key={index} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                    <div key={index} className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                       <RadioGroupItem value={type} id={`type-${index}`} />
                       <Label htmlFor={`type-${index}`} className="cursor-pointer flex-1 font-normal">
                         {type}
@@ -219,25 +219,25 @@ export default function SingleVehicleReport() {
                 onValueChange={(value) => setFormData({ ...formData, vehicleOwnership: value })}
                 className="space-y-3"
               >
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="personal" id="personal" />
                   <Label htmlFor="personal" className="cursor-pointer flex-1 font-normal">
                     {t('singleVehicle.step4.personal')}
                   </Label>
                 </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="company" id="company" />
                   <Label htmlFor="company" className="cursor-pointer flex-1 font-normal">
                     {t('singleVehicle.step4.company')}
                   </Label>
                 </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="rental" id="rental" />
                   <Label htmlFor="rental" className="cursor-pointer flex-1 font-normal">
                     {t('singleVehicle.step4.rental')}
                   </Label>
                 </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
+                <div className="flex items-center space-x-3 rounded-lg hover:bg-accent/5 transition-colors">
                   <RadioGroupItem value="borrowed" id="borrowed" />
                   <Label htmlFor="borrowed" className="cursor-pointer flex-1 font-normal">
                     {t('singleVehicle.step4.borrowed')}
@@ -297,13 +297,11 @@ export default function SingleVehicleReport() {
             </div>
 
             <div className="space-y-4">
-              {/* Accident Type Card */}
               <div className="bg-background border border-border rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.accidentType')}</h3>
                 <p className="text-sm bg-muted/50 inline-block px-3 py-2 rounded-full text-foreground">{t('singleVehicle.step6.singleVehicle')}</p>
               </div>
 
-              {/* Photos Uploaded Card */}
               <div className="bg-background border border-border rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.photosUploaded')}</h3>
                 <div className="flex items-center gap-2 text-sm text-accent">
@@ -312,7 +310,6 @@ export default function SingleVehicleReport() {
                 </div>
               </div>
 
-              {/* Vehicle Information Card */}
               <div className="bg-background border border-border rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.vehicleInfo')}</h3>
                 <div className="space-y-2">
@@ -327,19 +324,16 @@ export default function SingleVehicleReport() {
                 </div>
               </div>
 
-              {/* Incident Type Card */}
               <div className="bg-background border border-border rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.incidentType')}</h3>
                 <p className="text-sm text-muted-foreground">{formData.accidentType || t('singleVehicle.step6.notSpecified')}</p>
               </div>
 
-              {/* Incident Description Card */}
               <div className="bg-background border border-border rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-3">{t('singleVehicle.step6.incidentDesc')}</h3>
                 <p className="text-sm text-muted-foreground">{formData.description || t('singleVehicle.step6.noDescription')}</p>
               </div>
 
-              {/* Complete Report Card */}
               <div className="bg-accent/5 border border-border rounded-xl p-6 space-y-4">
                 <h3 className="font-semibold text-foreground">{t('singleVehicle.step6.completeReport')}</h3>
                 <Button className="w-full" size="lg" variant="default">
@@ -364,9 +358,8 @@ export default function SingleVehicleReport() {
 
   return (
     <div className="min-h-screen bg-muted/30">
-      <Header showBackButton={true} backButtonText={t('singleVehicle.backToHome')} handleBack={() => navigate("/accident-type")} type="single-vehicle-report" />
+      <Header />
 
-      {/* Title */}
       <div className="bg-background border-b border-border pt-20">
         <div className="container mx-auto px-4 py-6 text-center">
           <h1 className="font-heading text-h2 text-foreground">{t('singleVehicle.title')}</h1>
@@ -374,7 +367,6 @@ export default function SingleVehicleReport() {
         </div>
       </div>
 
-      {/* Progress Steps */}
       <div className="bg-background border-b border-border">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4 overflow-x-auto">
@@ -399,10 +391,10 @@ export default function SingleVehicleReport() {
                     <div className="flex justify-center">
                       <div
                         className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors relative z-10 ${currentStep === step.id
+                          ? "bg-primary text-primary-foreground"
+                          : currentStep > step.id
                             ? "bg-primary text-primary-foreground"
-                            : currentStep > step.id
-                              ? "bg-primary text-primary-foreground"
-                              : "bg-muted text-muted-foreground"
+                            : "bg-muted text-muted-foreground"
                           }`}
                       >
                         {currentStep > step.id ? <CheckCircle2 className="w-5 h-5" /> : step.id}
@@ -422,19 +414,16 @@ export default function SingleVehicleReport() {
         </div>
       </div>
 
-      {/* Progress Bar */}
       <div className="container mx-auto px-4 pt-0">
         <Progress value={progress} className="h-1" />
       </div>
 
-      {/* Content */}
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-3xl mx-auto">
           <div className="bg-background border border-border rounded-2xl shadow-soft p-5 sm:p-8 mb-6">
             {renderStepContent()}
           </div>
 
-          {/* Navigation */}
           <div className="flex justify-between gap-4">
             <Button
               variant="outline"

@@ -12,7 +12,7 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header showBackButton={false} />
+      <Header />
       <div className="flex-1 flex items-center justify-center bg-gray-100">
         <div className="text-center">
           <h1 className="mb-4 text-h2">{t('notFound.pageNotFoundTitle')}</h1>

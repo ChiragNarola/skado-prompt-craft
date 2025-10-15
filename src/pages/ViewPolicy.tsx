@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import {  Download, Phone, Mail, Calendar, Car, Shield, FileText, Eye, Edit, Trash2 } from "lucide-react";
+import { Download, Phone, Mail, Calendar, Car, Shield, FileText, Eye, Edit, Trash2 } from "lucide-react";
 
 const ViewPolicy = () => {
   const { t } = useTranslation();
@@ -133,11 +133,9 @@ const ViewPolicy = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-       <Header showBackButton={true} backButtonText={t('viewPolicy.backToHome')} handleBack={() => navigate("/")} type="viewPolicy" />
-  
+      <Header />
       <main className="pt-24 pb-16 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          {/* Header Section */}
           <div className="text-center mb-12">
             <h1 className="font-heading text-h1 mb-6 text-foreground">
               {t('viewPolicy.title')}
@@ -149,7 +147,6 @@ const ViewPolicy = () => {
 
           {viewMode === 'list' ? (
             <>
-              {/* Policies Table */}
               <div className="max-w-6xl mx-auto">
                 <div className="bg-card rounded-2xl shadow-soft p-6">
                   <div className="mb-6">
@@ -231,7 +228,6 @@ const ViewPolicy = () => {
             </>
           ) : (
             <>
-              {/* Back Button */}
               <div className="max-w-4xl mx-auto mb-6">
                 <Button
                   variant="ghost"
@@ -244,10 +240,8 @@ const ViewPolicy = () => {
             </>
           )}
 
-          {/* Policy Details Section */}
           {viewMode === 'detail' && selectedPolicy && (
             <div className="max-w-4xl mx-auto space-y-6">
-              {/* Policy Header */}
               <div className="bg-card rounded-2xl shadow-soft p-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -264,16 +258,14 @@ const ViewPolicy = () => {
                 </div>
               </div>
 
-              {/* Policy Information List */}
               <div className="bg-card rounded-2xl shadow-soft p-6">
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-foreground mb-4">
                     {t('viewPolicy.policyDetails')}
                   </h3>
                 </div>
-                
+
                 <div className="space-y-4">
-                  {/* Policy Holder Section */}
                   <div className="border-b border-border pb-4">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                       <Shield className="h-5 w-5" />
@@ -295,7 +287,6 @@ const ViewPolicy = () => {
                     </ul>
                   </div>
 
-                  {/* Vehicle Information Section */}
                   <div className="border-b border-border pb-4">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                       <Car className="h-5 w-5" />
@@ -319,7 +310,6 @@ const ViewPolicy = () => {
                     </ul>
                   </div>
 
-                  {/* Coverage Details Section */}
                   <div className="border-b border-border pb-4">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                       <FileText className="h-5 w-5" />
@@ -345,7 +335,6 @@ const ViewPolicy = () => {
                     </ul>
                   </div>
 
-                  {/* Premium Information Section */}
                   <div>
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                       <Calendar className="h-5 w-5" />
@@ -369,7 +358,6 @@ const ViewPolicy = () => {
                 </div>
               </div>
 
-              {/* Policy Dates */}
               <div className="bg-card rounded-2xl shadow-soft p-6">
                 <div className="mb-4">
                   <h3 className="text-lg font-bold text-foreground">
@@ -388,7 +376,6 @@ const ViewPolicy = () => {
                 </div>
               </div>
 
-              {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="hero" size="lg" className="flex items-center gap-2 px-6 py-3 text-sm font-medium">
                   <Download className="h-4 w-4" />

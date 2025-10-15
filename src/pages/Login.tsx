@@ -14,11 +14,9 @@ const Login = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle login logic here
     console.log("Login attempt:", { email, password });
-
+    localStorage.setItem("userEmail", email);
     localStorage.setItem("isLoggedIn", "true");
-    // Redirect to accident type selection page after successful login
     navigate("/accident-type");
   };
 
