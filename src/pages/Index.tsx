@@ -32,31 +32,39 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
+
               <h1 className="font-heading text-h1 text-foreground text-center md:text-left">
                 {t('hero.title')} <span className="text-primary">{t('hero.titleHighlight')}</span>
               </h1>
+
               <p className="font-sans text-body text-muted-foreground mb-8 text-center md:text-left">
                 {t('hero.subtitle')}
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+
                 <Button variant="hero" size="lg" className="h-12 lg:h-14 px-8 lg:px-10" onClick={handleStartReport}>
                   {t('hero.startReport')}
                 </Button>
+
                 <a href="#how-it-works">
                   <Button variant="outline" size="lg" className="h-12 lg:h-14 px-8 lg:px-10">
                     {t('hero.learnMore')}
                   </Button>
                 </a>
+
               </div>
               <div className="mt-8 flex items-center gap-8 text-sm text-muted-foreground justify-center md:justify-start">
+                
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-accent" />
                   <span>{t('hero.noSignup')}</span>
                 </div>
+
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-accent" />
                   <span>{t('hero.quickProcess')}</span>
                 </div>
+                
               </div>
             </div>
             <div className="animate-slide-up">

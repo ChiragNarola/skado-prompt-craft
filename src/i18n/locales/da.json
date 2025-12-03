@@ -1,6 +1,7 @@
 {
   "header": {
     "home": "Hjem",
+    "aboutus": "Om os",
     "howItWorks": "Sådan virker det",
     "features": "Funktioner",
     "support": "Support",
@@ -29,13 +30,13 @@
     "step3Desc": "Send din rapport direkte til dit forsikringsselskab"
   },
   "trust": {
-    "badge": "Betroet af tusindvis",
-    "title": "Lige så effektiv som en tech startup — lige så pålidelig som et forsikringsselskab",
-    "description": "Skado kombinerer banebrydende teknologi med forsikringspålidelighed for at give dig det bedste fra begge verdener.",
-    "security": "Bank-niveau sikkerhed",
-    "securityDesc": "Dine data er krypteret og beskyttet",
-    "speed": "Lynhurtig",
-    "speedDesc": "Fuldfør rapporter på under 2 minutter"
+     "badge": "Betroet af tusindvis",
+     "title": "Digital skadeanmeldelse gjort enkel, sikker og lynhurtig",
+     "description": "Skado forvandler en stressende situation til en enkel og tryg proces. Med MitID-signatur, GPS og intelligent billeddokumentation skaber vi rapporter, som alle forsikringsselskaber kan stole på — på under 2 minutter.",
+     "security": "Datakvalitet i et format forsikringsselskaber kan stole på",
+     "securityDesc": "Skado leverer strukturerede, verificerede skadeoplysninger — med billeder, metadata, GPS og signatur — så sagsbehandlingen bliver hurtigere og mere præcis fra første sekund.",
+     "speed": "Reducerer omkostninger og manuelle fejl",
+     "speedDesc": "Automatiseret billedguiding, MitID-verifikation og korrekt indsamlede oplysninger reducerer supporttid, fejlrapportering og efterspørgsler. Mindre administration for selskabet — mindre ventetid for kunden."
   },
   "cta": {
     "title": "Klar til at komme i gang?",
@@ -110,10 +111,14 @@
       "title": "Køretøjs nummerplade",
       "description": "Indtast nummerplade på dit køretøj eller brug vores scanner til automatisk registrering.",
       "plateNumber": "Nummerpladenummer",
+      "otherPlatNumber":"Andet køretøjs nummerplade",
       "platePlaceholder": "Indtast nummerplade (f.eks. AB12345)",
+       "otherPlatePlaceholder": "Indtast det andet køretøjs nummerplade (f.eks. AB12345)",
       "orScan": "Eller scan automatisk",
       "autoRecognition": "Automatisk nummerpladeregistrering",
       "pointCamera": "Ret dit kamera mod nummerpladen",
+      "otherAutoRecognition": "Automatisk nummerpladegenkendelse – Andet køretøj",
+      "otherPointCamera": "Peg kameraet mod det andet køretøjs nummerplade",
       "startScanning": "Start scanning"
     },
     "step3": {
@@ -323,6 +328,33 @@
     "noPolicyFound": "Ingen police fundet med det angivne nummer",
     "searchAgain": "Søg igen",
     "backToHome": "Tilbage til hjem"
-  }
+  },
+  "aboutus": {
+  "title": "Vores Mission",
+  "dec1": "Når en skade sker, er situationen ofte kaotisk. Der er stress, tidspres, manglende dokumentation og usikkerhed om, hvad der skal gøres.",
+  "dec2": "Derfor har vi udviklet Skado.dk som Danmarks mest brugervenlige og pålidelige platform til skadesanmeldelser.",
+  "firstsection": "Hvad Driver Os",
+  "secondsection": "Teknologi, der Skaber Tryghed",
+  "secondsectiondec": "Vi har bygget Skado.dk på avancerede teknologier, der er designet til at give sikkerhed, nøjagtighed og tryghed i stressede situationer.",
+  "securitytitle": "Sikkerhed & Tillid",
+  "securitydec": "Vi prioriterer databeskyttelse og juridisk compliance i alle trin af skadesprocessen.",
+  "speed": "Hastighed & Effektivitet",
+  "speeddec": "Vi reducerer tiden fra ulykke til løsning gennem smart automatisering og tydelige arbejdsgange.",
+  "Centereddesign": "Brugercentreret Design",
+  "Centereddesigndec": "Skabt til virkelige situationer, hvor stressniveauet er højt, og der er brug for klarhed.",
+  "mitid": "MitID Underskrift",
+  "mitiddec": "Sikker digital underskrift for juridisk gyldighed.",
+  "gps": "GPS Lokation",
+  "gpsdec": "Automatisk positionsverifikation for præcis anmeldelse.",
+  "image": "Billeddokumentation",
+  "imagedec": "Smart billedtagning og organisering.",
+  "aiguidance": "AI Vejledning",
+  "aiguidancedec": "Intelligent assistance gennem hele processen.",
+  "multilingual": "Flersproget Support",
+  "multilingualdec": "Flows til udenlandske parter på deres eget sprog.",
+  "insurance": "Forsikringsintegration",
+  "insurancedec": "Direkte integrationer med forsikringsselskaber."
+}
+
 }
 
