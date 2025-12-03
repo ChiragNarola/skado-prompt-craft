@@ -1,6 +1,7 @@
 {
   "header": {
     "home": "Home",
+    "aboutus": "About Us",
     "howItWorks": "How It Works",
     "features": "Features",
     "support": "Support",
@@ -29,13 +30,13 @@
     "step3Desc": "Submit your report directly to your insurance company"
   },
   "trust": {
-    "badge": "Trusted by Thousands",
-    "title": "As efficient as a tech startup — as trustworthy as an insurance company",
-    "description": "Skado combines cutting-edge technology with insurance-grade reliability to give you the best of both worlds.",
-    "security": "Bank-Level Security",
-    "securityDesc": "Your data is encrypted and protected",
-    "speed": "Lightning Fast",
-    "speedDesc": "Complete reports in under 2 minutes"
+     "badge": "Trusted by Thousands",
+     "title": "Digital damage reporting made simple, secure, and lightning fast",
+     "description": "Skado transforms a stressful situation into a simple and safe process. With MitID signature, GPS, and intelligent image documentation, we create reports that all insurance companies can trust — in under 2 minutes.",
+     "security": "Data quality in a format insurance companies can trust",
+     "securityDesc": "Skado delivers structured, verified claim information — with photos, metadata, GPS, and signature — enabling faster and more accurate case processing from the very first second.",
+     "speed": "Reduces costs and manual errors",
+     "speedDesc": "Automated image guiding, MitID verification, and correctly collected information reduce support time, error reporting, and follow-up requests. Less administration for the company — less waiting time for the customer."
   },
   "cta": {
     "title": "Ready to Get Started?",
@@ -110,10 +111,14 @@
       "title": "Vehicle License Plate",
       "description": "Enter the license plate number of your vehicle or use our scanner for automatic detection.",
       "plateNumber": "License Plate Number",
+      "otherPlatNumber":"Other Vehicle License Plate Number",
       "platePlaceholder": "Enter license plate (e.g., AB12345)",
+      "otherPlatePlaceholder": "Enter other vehicle's license plate (e.g., AB12345)",
       "orScan": "Or scan automatically",
       "autoRecognition": "Automatic License Plate Recognition",
       "pointCamera": "Point your camera at the license plate",
+      "otherAutoRecognition": "Automatic License Plate Recognition – Other Vehicle",
+      "otherPointCamera": "Point your camera at the other vehicle’s license plate",
       "startScanning": "Start Scanning"
     },
     "step3": {
@@ -331,5 +336,31 @@
     "noPolicyFound": "No policy found with the provided number",
     "searchAgain": "Search Again",
     "backToHome": "Back to Home"
+  },
+  "aboutus":{
+    "title":"Our Mission",
+    "dec1":"When an injury occurs, the situation is often chaotic. There is stress, time pressure, documentation that is missing, and uncertainty about what needs to be done.",
+    "dec2":"That's why we've developed Skado.dk as Denmark's most user-friendly and reliable platform for claims reporting.",
+    "firstsection":"What Drives Us",
+    "secondsection":"Technology That Creates Security",
+    "secondsectiondec":"We've built Skado.dk around cutting-edge technologies designed to provide security, accuracy, and peace of mind during stressful situations.",
+    "securitytitle":"Security & Trust",
+    "securitydec":"We prioritize data protection and legal compliance in every step of the claims process.",
+    "speed":"Speed & Efficiency",
+    "speeddec":"Reducing the time from accident to resolution through smart automation and clear workflows.",
+    "Centereddesign":"User-Centered Design",
+    "Centereddesigndec":"Built for real-life situations where stress is high and clarity is essential.",
+    "mitid":"MitID Signing",
+    "mitiddec":"Secure digital signatures for legal compliance",
+    "gps":"GPS Location",
+    "gpsdec":"Automatic location verification for accurate reporting",
+    "image":"Image Documentation",
+    "imagedec":"mart photo capture and organization",
+    "aiguidance":"AI Guidance",
+    "aiguidancedec":"Intelligent assistance through the process",
+    "multilingual":"Multilingual Support",
+    "multilingualdec":"Flows for foreign parties in their language",
+    "insurance":"Insurance Integration",
+    "insurancedec":"Direct connections to insurance companies"
   }
 }

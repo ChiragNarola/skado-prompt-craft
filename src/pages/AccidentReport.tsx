@@ -36,6 +36,7 @@ export default function AccidentReport() {
   const [formData, setFormData] = useState({
     photos: [] as File[],
     licensePlate: "",
+    otherLicensePlate:"",
     description: "",
     vehicleOwnership: "",
     locationConsent: false,
@@ -65,6 +66,8 @@ export default function AccidentReport() {
   };
 
   const renderStepContent = () => {
+    console.log(t("report.step2.otherPlatNumber"));
+    console.log(t("report.step2.otherPlatePlaceholder"));
     switch (currentStep) {
       case 1:
         return (
@@ -123,41 +126,71 @@ export default function AccidentReport() {
 
       case 2:
         return (
-          <div className="space-y-6">
-            <div className="text-center space-y-3">
-              <h2 className="font-heading text-h2 text-foreground">{t('report.step2.title')}</h2>
-              <p className="font-sans text-body text-muted-foreground">
-                {t('report.step2.description')}
-              </p>
-            </div>
+        <div className="space-y-12">
+  {/* Main Header */}
+  <div className="text-center space-y-3">
+    <h2 className="font-heading text-h2 text-foreground">{t('report.step2.title')}</h2>
+    <p className="font-sans text-body text-muted-foreground">
+      {t('report.step2.description')}
+    </p>
+  </div>
 
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="license-plate">{t('report.step2.plateNumber')}</Label>
-                <Input
-                  id="license-plate"
-                  placeholder={t('report.step2.platePlaceholder')}
-                  value={formData.licensePlate}
-                  onChange={(e) => setFormData({ ...formData, licensePlate: e.target.value })}
-                />
-              </div>
-
-              <p className="text-center text-sm text-muted-foreground">{t('report.step2.orScan')}</p>
-
-              <div className="border-2 border-border rounded-xl p-8 text-center space-y-4 bg-accent/5">
-                <div className="flex justify-center">
-                  <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
-                    <Camera className="w-8 h-8 text-muted-foreground" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <p className="font-medium text-foreground">{t('report.step2.autoRecognition')}</p>
-                  <p className="text-sm text-muted-foreground">{t('report.step2.pointCamera')}</p>
-                </div>
-                <Button variant="default">{t('report.step2.startScanning')}</Button>
-              </div>
-            </div>
+  {/* Two-column layout */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* First Vehicle */}
+    <div className="space-y-4">
+      <div className="space-y-2">
+        <Label htmlFor="license-plate">{t('report.step2.plateNumber')}</Label>
+        <Input
+          id="license-plate"
+          placeholder={t('report.step2.platePlaceholder')}
+          value={formData.licensePlate}
+          onChange={(e) => setFormData({ ...formData, licensePlate: e.target.value })}
+        />
+      </div>
+      <p className="text-center text-sm text-muted-foreground">{t('report.step2.orScan')}</p>
+      <div className="border-2 border-border rounded-xl p-8 text-center space-y-4 bg-accent/5">
+        <div className="flex justify-center">
+          <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
+            <Camera className="w-8 h-8 text-muted-foreground" />
           </div>
+        </div>
+        <div className="space-y-2">
+          <p className="font-medium text-foreground">{t('report.step2.autoRecognition')}</p>
+          <p className="text-sm text-muted-foreground">{t('report.step2.pointCamera')}</p>
+        </div>
+        <Button variant="default">{t('report.step2.startScanning')}</Button>
+      </div>
+    </div>
+
+    {/* Other Vehicle */}
+    <div className="space-y-4">
+      <div className="space-y-2">
+        <Label htmlFor="other-license-plate">{t('report.step2.otherPlatNumber')}</Label>
+        <Input
+          id="other-license-plate"
+          placeholder={t('report.step2.otherPlatePlaceholder')}
+          value={formData.otherLicensePlate}
+          onChange={(e) => setFormData({ ...formData, otherLicensePlate: e.target.value })}
+        />
+      </div>
+      <p className="text-center text-sm text-muted-foreground">{t('report.step2.orScan')}</p>
+      <div className="border-2 border-border rounded-xl p-8 text-center space-y-4 bg-accent/5">
+        <div className="flex justify-center">
+          <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
+            <Camera className="w-8 h-8 text-muted-foreground" />
+          </div>
+        </div>
+        <div className="space-y-2">
+          <p className="font-medium text-foreground">{t('report.step2.otherAutoRecognition')}</p>
+          <p className="text-sm text-muted-foreground">{t('report.step2.otherPointCamera')}</p>
+        </div>
+        <Button variant="default">{t('report.step2.startScanning')}</Button>
+      </div>
+    </div>
+  </div>
+</div>
+
         );
 
       case 3:
@@ -489,7 +522,7 @@ export default function AccidentReport() {
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="bg-background border border-border rounded-2xl shadow-soft p-5 sm:p-8 mb-6">
             {renderStepContent()}
           </div>

@@ -11,7 +11,9 @@ import AccidentReport from "./pages/AccidentReport";
 import SingleVehicleReport from "./pages/SingleVehicleReport";
 import ViewPolicy from "./pages/ViewPolicy";
 import NotFound from "./pages/NotFound";
+import AboutUs from "./pages/AboutUs";
 import "./i18n/config";
+
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,7 @@ const App = () => (
           <Route path="/report" element={<AccidentReport />} />
           <Route path="/single-vehicle-report" element={<SingleVehicleReport />} />
           <Route path="/view-policy" element={<ViewPolicy />} />
+          <Route path="/about-us" element={<AboutUs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
