@@ -197,15 +197,37 @@
   "accidentType": {
     "title": "Report Your Accident",
     "subtitle": "Fast, secure, and legally compliant accident reporting. Get your report generated in minutes with digital signatures and GPS verification.",
-    "twoVehicle": {
-      "title": "Two-Vehicle Accident",
-      "description": "Collision involving another vehicle. We'll help you connect with the other party for confirmation.",
-      "button": "Start Two-Vehicle Report"
+    "formTitle": "Choose one of the situations below: *",
+    "continueButton": "Continue",
+    "multiVehicle": {
+      "title": "2 or more cars etc",
+      "description": "Accidents involving one or more motorized vehicles.",
+      "button": "Start Report"
     },
     "singleVehicle": {
-      "title": "Single-Vehicle Accident",
-      "description": "Solo incident with no other parties involved. Quick and simple reporting process.",
-      "button": "Start Single-Vehicle Report"
+      "title": "Single damage",
+      "description": "For example, hitting animals, objects and buildings or if you have driven into a ditch.",
+      "button": "Start Report"
+    },
+    "parkedCar": {
+      "title": "Single damage",
+      "description": "Damage to your car, e.g. from car doors, shopping carts or similar.",
+      "button": "Start Report"
+    },
+    "cyclistPedestrian": {
+      "title": "Damage on bicycle or person",
+      "description": "If you have hit a cyclist or pedestrian.",
+      "button": "Start Report"
+    },
+    "theft": {
+      "title": "Theft from car",
+      "description": "Theft of number plates, speakers and damage to the car in connection with the theft.",
+      "button": "Start Report"
+    },
+    "vandalism": {
+      "title": "Single damage, made by a person to the car",
+      "description": "Damage to your car caused by a person with malicious intent.",
+      "button": "Start Report"
     },
     "features": {
       "photo": {

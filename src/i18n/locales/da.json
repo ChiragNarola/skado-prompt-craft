@@ -197,15 +197,37 @@
   "accidentType": {
     "title": "Anmeld din ulykke",
     "subtitle": "Hurtig, sikker og juridisk overensstemmende uheldsrapportering. Få din rapport genereret på minutter med digitale underskrifter og GPS-verifikation.",
-    "twoVehicle": {
-      "title": "To-køretøjs ulykke",
-      "description": "Kollision med et andet køretøj. Vi hjælper dig med at komme i kontakt med modparten til bekræftelse.",
-      "button": "Start to-køretøjs rapport"
+    "formTitle": "Vælg en af nedenstående situationer: *",
+    "continueButton": "Fortsæt",
+    "multiVehicle": {
+      "title": "Sammenstød med andet køretøj",
+      "description": "Uheld hvor et eller flere motoriseret køretøjer er involveret.",
+      "button": "Start anmeldelse"
     },
     "singleVehicle": {
-      "title": "Enkelt køretøjs ulykke",
-      "description": "Enkelt hændelse uden andre involverede parter. Hurtig og simpel rapporteringsproces.",
-      "button": "Start enkelt køretøjs rapport"
+      "title": "Eneuheld",
+      "description": "Fx påkørsel af dyr, ting og bygning eller hvis du er kørt i grøften.",
+      "button": "Start anmeldelse"
+    },
+    "parkedCar": {
+      "title": "Skader på parkeret bil",
+      "description": "Skader på din bil fx fra bildøre, indkøbsvogne eller lign.",
+      "button": "Start anmeldelse"
+    },
+    "cyclistPedestrian": {
+      "title": "Sammenstød med cyklist eller fodgænger",
+      "description": "Hvis du er kørt sammen med en cyklist eller ind i en fodgænger.",
+      "button": "Start anmeldelse"
+    },
+    "theft": {
+      "title": "Tyveri fra din bil",
+      "description": "Tyveri af fx nr. plader, musikanlæg samt skade på bilen i forbindelse med tyveriet.",
+      "button": "Start anmeldelse"
+    },
+    "vandalism": {
+      "title": "Hærværk",
+      "description": "Skader på din bil forvoldt med vilje af en anden person.",
+      "button": "Start anmeldelse"
     },
     "features": {
       "photo": {
