@@ -151,10 +151,10 @@ const ViewPolicy = () => {
                 <div className="bg-card rounded-2xl shadow-soft p-6">
                   <div className="mb-6">
                     <h2 className="text-xl font-bold text-foreground mb-2">
-                      Your Insurance Policies
+                      {t('viewPolicy.yourInsurancePolicies')}
                     </h2>
                     <p className="text-sm text-muted-foreground">
-                      Manage and view all your insurance policies
+                      {t('viewPolicy.manageAndView')}
                     </p>
                   </div>
 
@@ -162,12 +162,12 @@ const ViewPolicy = () => {
                     <table className="w-full">
                       <thead>
                         <tr className="border-b border-border">
-                          <th className="text-left py-3 px-4 font-semibold text-foreground">Policy Number</th>
-                          <th className="text-left py-3 px-4 font-semibold text-foreground">Policy Holder</th>
-                          <th className="text-left py-3 px-4 font-semibold text-foreground">Vehicle</th>
-                          <th className="text-left py-3 px-4 font-semibold text-foreground">Premium</th>
-                          <th className="text-left py-3 px-4 font-semibold text-foreground">Status</th>
-                          <th className="text-left py-3 px-4 font-semibold text-foreground">Actions</th>
+                          <th className="text-left py-3 px-4 font-semibold text-foreground">{t('viewPolicy.policyNumber')}</th>
+                          <th className="text-left py-3 px-4 font-semibold text-foreground">{t('viewPolicy.policyHolder')}</th>
+                          <th className="text-left py-3 px-4 font-semibold text-foreground">{t('viewPolicy.vehicleHeader')}</th>
+                          <th className="text-left py-3 px-4 font-semibold text-foreground">{t('viewPolicy.premium')}</th>
+                          <th className="text-left py-3 px-4 font-semibold text-foreground">{t('viewPolicy.status')}</th>
+                          <th className="text-left py-3 px-4 font-semibold text-foreground">{t('viewPolicy.actions')}</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -234,7 +234,7 @@ const ViewPolicy = () => {
                   onClick={handleBackToList}
                   className="flex items-center gap-2"
                 >
-                  ← Back to Policies List
+                  {t('viewPolicy.backToPoliciesList')}
                 </Button>
               </div>
             </>
@@ -249,7 +249,7 @@ const ViewPolicy = () => {
                       {t('viewPolicy.policyDetails')}
                     </h2>
                     <p className="text-sm text-muted-foreground">
-                      Policy Number: {(selectedPolicy || mockPoliciesData[0]).policyNumber}
+                      {t('viewPolicy.policyNumberLabel')} {(selectedPolicy || mockPoliciesData[0]).policyNumber}
                     </p>
                   </div>
                   <Badge className={`${getStatusColor((selectedPolicy || mockPoliciesData[0]).status)} text-xs font-medium px-2 py-1`}>
@@ -273,7 +273,7 @@ const ViewPolicy = () => {
                     </h4>
                     <ul className="space-y-2 ml-7">
                       <li className="flex items-center gap-2 text-sm">
-                        <span className="font-medium text-foreground">Name:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.name')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).policyHolder}</span>
                       </li>
                       <li className="flex items-center gap-2 text-sm">
@@ -294,17 +294,17 @@ const ViewPolicy = () => {
                     </h4>
                     <ul className="space-y-2 ml-7">
                       <li className="flex items-center gap-2 text-sm">
-                        <span className="font-medium text-foreground">Vehicle:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.vehicle')}</span>
                         <span className="text-muted-foreground">
                           {(selectedPolicy || mockPoliciesData[0]).vehicle.year} {(selectedPolicy || mockPoliciesData[0]).vehicle.make} {(selectedPolicy || mockPoliciesData[0]).vehicle.model}
                         </span>
                       </li>
                       <li className="flex items-center gap-2 text-sm">
-                        <span className="font-medium text-foreground">License Plate:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.licensePlate')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).vehicle.licensePlate}</span>
                       </li>
                       <li className="flex items-center gap-2 text-sm">
-                        <span className="font-medium text-foreground">VIN:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.vin')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).vehicle.vin}</span>
                       </li>
                     </ul>
@@ -317,19 +317,19 @@ const ViewPolicy = () => {
                     </h4>
                     <ul className="space-y-2 ml-7">
                       <li className="flex justify-between items-center text-sm">
-                        <span className="font-medium text-foreground">Liability Coverage:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.liabilityCoverage')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).coverage.liability}</span>
                       </li>
                       <li className="flex justify-between items-center text-sm">
-                        <span className="font-medium text-foreground">Comprehensive:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.comprehensive')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).coverage.comprehensive}</span>
                       </li>
                       <li className="flex justify-between items-center text-sm">
-                        <span className="font-medium text-foreground">Collision:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.collision')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).coverage.collision}</span>
                       </li>
                       <li className="flex justify-between items-center text-sm">
-                        <span className="font-medium text-foreground">Deductible:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.deductible')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).coverage.deductible}</span>
                       </li>
                     </ul>
@@ -342,15 +342,15 @@ const ViewPolicy = () => {
                     </h4>
                     <ul className="space-y-2 ml-7">
                       <li className="flex justify-between items-center text-sm">
-                        <span className="font-medium text-foreground">Monthly Premium:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.monthlyPremium')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).premium.monthly}</span>
                       </li>
                       <li className="flex justify-between items-center text-sm">
-                        <span className="font-medium text-foreground">Annual Premium:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.annualPremium')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).premium.annual}</span>
                       </li>
                       <li className="flex justify-between items-center text-sm">
-                        <span className="font-medium text-foreground">Next Payment Due:</span>
+                        <span className="font-medium text-foreground">{t('viewPolicy.nextPaymentDue')}</span>
                         <span className="text-muted-foreground">{(selectedPolicy || mockPoliciesData[0]).premium.nextPayment}</span>
                       </li>
                     </ul>
@@ -361,7 +361,7 @@ const ViewPolicy = () => {
               <div className="bg-card rounded-2xl shadow-soft p-6">
                 <div className="mb-4">
                   <h3 className="text-lg font-bold text-foreground">
-                    Policy Period
+                    {t('viewPolicy.policyPeriod')}
                   </h3>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">

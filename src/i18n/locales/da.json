@@ -119,7 +119,7 @@
       "pointCamera": "Ret dit kamera mod nummerpladen",
       "otherAutoRecognition": "Automatisk nummerpladegenkendelse – Andet køretøj",
       "otherPointCamera": "Peg kameraet mod det andet køretøjs nummerplade",
-      "startScanning": "Start scanning"
+      "startScanning": "Begynd scanning"
     },
     "step3": {
       "label": "Beskrivelse",
@@ -162,7 +162,12 @@
       "question": "Modpartstype",
       "danishMitid": "Dansk bopæl (med MitID)",
       "foreign": "Udenlandsk besøgende/bopæl",
-      "none": "Ingen anden part involveret"
+      "none": "Ingen anden part involveret",
+      "otherPartyName": "Modpartens navn",
+      "otherPartyNamePlaceholder": "Fulde navn (som på ID)",
+      "otherPartyPhone": "Telefonnummer",
+      "otherPartyPhonePlaceholder": "+45 12 34 56 78",
+      "smsNote": "Vi sender en SMS med beskrivelsen, så de kan bekræfte detaljerne."
     },
     "step7": {
       "label": "Opsummering",
@@ -183,7 +188,10 @@
       "signMitid": "Underskriv med MitID",
       "downloadPdf": "Download PDF-rapport",
       "reportId": "Rapport-ID: {{id}}",
-      "generated": "Genereret: {{date}}"
+      "generated": "Genereret: {{date}}",
+      "otherPartyContact": "Modpartens kontaktoplysninger",
+      "name": "Navn:",
+      "phone": "Telefon:"
     }
   },
   "accidentType": {
@@ -241,7 +249,7 @@
       "orScan": "Eller scan automatisk",
       "autoRecognition": "Automatisk nummerpladeregistrering",
       "pointCamera": "Ret dit kamera mod nummerpladen",
-      "startScanning": "Start scanning"
+      "startScanning": "Begynd scanning"
     },
     "step3": {
       "label": "Beskrivelse",
@@ -309,12 +317,17 @@
   "viewPolicy": {
     "title": "Se police",
     "subtitle": "Få adgang til og administrer dine forsikringspoliceoplysninger",
+    "yourInsurancePolicies": "Dine forsikringspolice",
+    "manageAndView": "Administrer og se alle dine forsikringspolice",
     "policyNumber": "Policenummer",
+    "policyNumberLabel": "Policenummer:",
     "policyNumberPlaceholder": "Indtast dit policenummer",
     "searchPolicy": "Søg police",
     "policyDetails": "Policedetaljer",
     "policyHolder": "Policeindehaver",
     "vehicleInfo": "Køretøjsoplysninger",
+    "vehicleHeader": "Køretøj",
+    "vehicle": "Køretøj:",
     "coverage": "Dækningsdetaljer",
     "premium": "Præmieoplysninger",
     "effectiveDate": "Gyldig fra",
@@ -323,6 +336,19 @@
     "active": "Aktiv",
     "inactive": "Inaktiv",
     "expired": "Udløbet",
+    "actions": "Handlinger",
+    "backToPoliciesList": "← Tilbage til policeliste",
+    "name": "Navn:",
+    "licensePlate": "Nummerplade:",
+    "vin": "VIN:",
+    "liabilityCoverage": "Ansvarsdækning:",
+    "comprehensive": "Kasko:",
+    "collision": "Kollision:",
+    "deductible": "Selvrisiko:",
+    "monthlyPremium": "Månedlig præmie:",
+    "annualPremium": "Årlig præmie:",
+    "nextPaymentDue": "Næste betaling:",
+    "policyPeriod": "Policeperiode",
     "downloadPolicy": "Download police",
     "contactSupport": "Kontakt support",
     "noPolicyFound": "Ingen police fundet med det angivne nummer",

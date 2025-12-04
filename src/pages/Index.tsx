@@ -12,7 +12,7 @@ const Index = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const handleStartReport = () => {
-    navigate('/report');
+    navigate('/accident-type');
   };
 
   const handleViewPolicy = () => {
@@ -54,7 +54,7 @@ const Index = () => {
 
               </div>
               <div className="mt-8 flex items-center gap-8 text-sm text-muted-foreground justify-center md:justify-start">
-                
+
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-accent" />
                   <span>{t('hero.noSignup')}</span>
@@ -64,7 +64,7 @@ const Index = () => {
                   <CheckCircle className="h-5 w-5 text-accent" />
                   <span>{t('hero.quickProcess')}</span>
                 </div>
-                
+
               </div>
             </div>
             <div className="animate-slide-up">
