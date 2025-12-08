@@ -17,7 +17,12 @@ const Login = () => {
     console.log("Login attempt:", { email, password });
     localStorage.setItem("userEmail", email);
     localStorage.setItem("isLoggedIn", "true");
+    if (email === "admin@admin.com") {
+    navigate("/admin-dashboard");
+  } else {
     navigate("/accident-type");
+  }
+    
   };
 
   return (

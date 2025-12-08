@@ -15,6 +15,7 @@ export const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const isloginButton = localStorage.getItem("isLoggedIn");
   const displayName = localStorage.getItem("userName") || localStorage.getItem("name") || "Your Name";
+
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     navigate('/');
@@ -31,7 +32,6 @@ export const Header = () => {
           {/* Desktop actions */}
           <div className="hidden md:flex items-center gap-2 sm:gap-3">
             <LanguageSwitcher />
-
             {isloginButton &&
               <>
                 <Link to="/accident-type">
@@ -70,17 +70,14 @@ export const Header = () => {
                     <DropdownMenuItem onSelect={handleLogout}>{t('header.logout')}</DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-                
               </>
             }
 
             {!isloginButton && (
               <>
-
                 <Link to="/login">
                   <Button variant="ghost" className="h-10 px-4 sm:h-11 sm:px-6 py-3">{t('header.login')}</Button>
                 </Link>
-
                 <Link to="/login">
                   <Button variant="hero" size="default" className="h-10 px-4 sm:h-11 sm:px-6 py-3">{t('header.getStarted')}</Button>
                 </Link>

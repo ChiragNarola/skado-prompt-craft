@@ -12,6 +12,9 @@ import SingleVehicleReport from "./pages/SingleVehicleReport";
 import ViewPolicy from "./pages/ViewPolicy";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
+import AdminDashboard  from "./pages/Admin/AdminDashboard";
+import AdminProfile  from "./pages/Admin/AdminProfile";
+import AdminViewReport from "./pages/Admin/AdminViewReport";
 import "./i18n/config";
 
 
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/single-vehicle-report" element={<SingleVehicleReport />} />
           <Route path="/view-policy" element={<ViewPolicy />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/admin-profile" element={<AdminProfile />} />
+          <Route path="/admin-view-report" element={<AdminViewReport />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -402,7 +402,153 @@
   "multilingualdec": "Flows til udenlandske parter på deres eget sprog.",
   "insurance": "Forsikringsintegration",
   "insurancedec": "Direkte integrationer med forsikringsselskaber."
-}
-
+},
+  "adminheader": {
+  "dashboardtitle": "Dashboard",
+  "dashboarddes": "Oversigt over systemanalyse",
+  "myprofiletitle": "Min Profil",
+  "myprofiledes": "Administrer dine personlige oplysninger og kontoindstillinger",
+  "claimreporttitle": "Skaderapport",
+  "claimreportdes": "Se og administrer alle skadesrapporter",
+  "username": "Chirag Limbachiya",
+  "userrole": "Admin"
+},
+"adminusermenu": {
+ "username":"Chirag Limbachiya",
+  "myprofile": "Min Profil",
+  "accountsettings": "Kontoindstillinger",
+  "privacysecurity": "Privatliv & Sikkerhed",
+  "notifications": "Notifikationer",
+  "helpandsupport": "Hjælp & Support",
+  "logout": "Log ud"
+},
+  "adminsidebar": {
+    "panelname": "Admin Panel",
+    "paneldescription": "Moderne Web App",
+    "main": "Hovedmenu",
+    "dashboard": "Dashboard",
+    "usermanagement": "Brugeradministration",
+    "viewreport": "Se Rapporter",
+    "myprofle": "Min Profil",
+    "settings": "Indstillinger",
+    "username": "Chirag Limbachiya",
+    "useremail": "admin@admin.com"
+  },
+  "admindashboard": {
+    "totaluser": "Samlede Brugere",
+    "totalusercount": "0",
+    "totaluserdes": "+0 aktive brugere",
+    "activepolicy": "Aktive Policier",
+    "activepolicycount": "0",
+    "activepolicydes": "0 afventer godkendelse",
+    "totalclaims": "Samlede Skadesanmeldelser",
+    "totalclaimcount": "0",
+    "totalclaimdes": "Poster i systemet"
+  },
+  "adminprofile": {
+    "editprofilelable": "Rediger Profil",
+    "changepass": "Skift Adgangskode",
+    "personalinformation": "Personlige Oplysninger",
+    "fullnamelabel": "Fulde Navn",
+    "fullnamevalue": "Chirag Limbachiya",
+    "fullnametag": "Primær",
+    "emaillabel": "Email Adresse",
+    "emailvalue": "admin@admin.com",
+    "emailtag": "Verificeret",
+    "rolelabel": "Rolle",
+    "rolevalue": "Admin",
+    "roletag": "Administrator",
+    "accounttypelabel": "Kontotype",
+    "accounttypevalue": "Premium",
+    "accounttypetag": "Fuld Adgang",
+    "editprofilebutton": "Rediger Profil",
+    "changepasswordbutton": "Skift Adgangskode",
+    "accountinformation": "Kontooplysninger",
+    "accountinformation_desc": "Yderligere kontodetaljer og præferencer",
+    "membersincelabel": "Medlem Siden",
+    "membersincevalue": "Januar 2023",
+    "lastloginlabel": "Sidste Login",
+    "lastloginvalue": "I dag kl. 14:30",
+    "accountstatuslabel": "Kontostatus",
+    "accountstatusvalue": "Aktiv",
+    "timezonelabel": "Tidszone",
+    "timezonevalue": "UTC +02:00 (Afrika/Johannesburg)",
+    "languagelabel": "Sprog",
+    "languagevalue": "Engelsk",
+    "notificationslabel": "Notifikationer",
+    "notificationsvalue": "Aktiveret"
+  },
+ "adminviewclaimreport": {
+  "title": "Vis skaderapporter",
+  "subtitle": "Få adgang til og administrér dine forsikringsskaderapporter",
+  "filtertitle": "Filtrer rapporter",
+  "daterangelabel": "Datointerval",
+  "daterangelast30days": "Seneste 30 dage",
+  "daterangelast90days": "Seneste 90 dage",
+  "daterangelast3months": "Seneste 3 måneder",
+  "daterangelast6months": "Seneste 6 måneder",
+  "daterangelastyear": "Sidste år",
+  "claimrangelabel": "Skadeinterval",
+  "claimstatuslabel": "Skadestatus",
+  "claimstatusall": "Alle statusser",
+  "statusapproved": "Godkendt",
+  "statuspending": "Afventer",
+  "statusunderreview": "Under gennemgang",
+  "statusrejected": "Afvist",
+  "policyholderlabel": "Forsikringstager",
+  "applyfiltersbutton": "Anvend filtre",
+  "yourclaimsreportstitle": "Dine skaderapporter",
+  "yourclaimsreportssubtitle": "Administrér og se alle dine forsikringsskaderapporter",
+  "downloadallreportsbutton": "Download alle rapporter",
+  "policyholderplaceholder": "Søg efter navn",
+  "tableclaimnumber": "Skadenummer",
+  "tablepolicyholder": "Forsikringstager",
+  "tableclaimdate": "Skadedato",
+  "tableclaimamount": "Skadebeløb",
+  "tablestatus": "Status",
+  "tableactions": "Handlinger",
+  "actionview": "Se rapport",
+  "actiondownload": "Download rapport",
+  "paginationshowing": "Viser 1 til 5 ud af 47 resultater",
+  "paginationprevious": "Forrige",
+  "paginationnext": "Næste"
+}, 
+  "adminviewclaimreportdata": [
+    {
+      "claim_number": "CLM-2024-001234",
+      "policy_holder": "John Doe",
+      "claim_date": "15. jan. 2024",
+      "claim_amount": "2.500,00 kr.",
+      "status": "Godkendt"
+    },
+    {
+      "claim_number": "CLM-2024-001235",
+      "policy_holder": "Jane Smith",
+      "claim_date": "18. jan. 2024",
+      "claim_amount": "1.850,00 kr.",
+      "status": "Afventer"
+    },
+    {
+      "claim_number": "CLM-2024-001236",
+      "policy_holder": "Mike Johnson",
+      "claim_date": "22. jan. 2024",
+      "claim_amount": "3.200,00 kr.",
+      "status": "Under Gennemgang"
+    },
+    {
+      "claim_number": "CLM-2024-001237",
+      "policy_holder": "Sarah Williams",
+      "claim_date": "25. jan. 2024",
+      "claim_amount": "950,00 kr.",
+      "status": "Afvist"
+    },
+    {
+      "claim_number": "CLM-2024-001238",
+      "policy_holder": "David Brown",
+      "claim_date": "28. jan. 2024",
+      "claim_amount": "4.100,00 kr.",
+      "status": "Godkendt"
+    }
+  ]
 }
 
